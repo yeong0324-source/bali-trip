@@ -1,0 +1,2077 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#3f5a3a">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="발리 허니문">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+
+<title>발리 허니문 · 12/3-12/11</title>
+<style>
+  :root{
+    --ink:#1e2a22;
+    --paper:#faf7f0;
+    --paper-2:#f1ecdf;
+    --line:#ddd3bb;
+    --terracotta:#c1653a;
+    --leaf:#5c7a52;
+    --leaf-deep:#3f5a3a;
+    --sand:#e8dcc0;
+    --gold:#b8925a;
+    --white:#fffdf8;
+    --shadow:0 2px 10px rgba(50,40,20,.08);
+    --radius:14px;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+  html,body{margin:0;padding:0;height:100%;}
+  body{
+    font-family:'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Malgun Gothic', sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    overscroll-behavior:none;
+  }
+  #app{
+    max-width:480px;
+    margin:0 auto;
+    min-height:100vh;
+    background:var(--paper);
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    transition:max-width .2s;
+  }
+
+  /* ---------- HEADER ---------- */
+  .topbar{
+    padding:22px 20px 16px;
+    background:linear-gradient(160deg, var(--leaf-deep) 0%, var(--leaf) 100%);
+    color:var(--white);
+    position:relative;
+    overflow:hidden;
+  }
+  .topbar::after{
+    content:"";
+    position:absolute;
+    right:-30px; top:-40px;
+    width:160px;height:160px;
+    border-radius:50%;
+    background:rgba(255,255,255,.06);
+  }
+  .topbar-title{
+    font-size:22px;
+    font-weight:700;
+    letter-spacing:-0.3px;
+    margin:0;
+  }
+  .topbar-sub{
+    font-size:13px;
+    opacity:.85;
+    margin-top:4px;
+    font-weight:400;
+  }
+  .topbar-dates{
+    display:flex;
+    gap:8px;
+    margin-top:14px;
+    font-size:12px;
+  }
+  .date-chip{
+    background:rgba(255,255,255,.15);
+    padding:5px 10px;
+    border-radius:20px;
+    font-weight:500;
+  }
+
+  /* ---------- CATEGORY MENU ---------- */
+  .cat-menu{
+    display:flex;
+    gap:8px;
+    padding:14px 16px;
+    overflow-x:auto;
+    background:var(--white);
+    border-bottom:1px solid var(--line);
+    position:sticky;
+    top:0;
+    z-index:20;
+    scrollbar-width:none;
+  }
+  .cat-menu::-webkit-scrollbar{display:none;}
+  .cat-btn{
+    flex:0 0 auto;
+    padding:9px 16px;
+    border-radius:20px;
+    border:1.5px solid var(--line);
+    background:var(--paper);
+    color:var(--ink);
+    font-size:13.5px;
+    font-weight:600;
+    white-space:nowrap;
+    cursor:pointer;
+    transition:all .15s;
+  }
+  .cat-btn.active{
+    background:var(--terracotta);
+    border-color:var(--terracotta);
+    color:#fff;
+  }
+
+  main{
+    flex:1;
+    padding:18px 16px 100px;
+  }
+
+  .section-title{
+    font-size:17px;
+    font-weight:700;
+    margin:4px 0 12px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .section-desc{
+    font-size:12.5px;
+    color:#6b6355;
+    margin:-8px 0 14px;
+  }
+
+  /* ---------- REGION TABS (for place lists) ---------- */
+  .region-tabs{
+    display:flex;
+    gap:6px;
+    margin-bottom:14px;
+    flex-wrap:wrap;
+  }
+  .region-tab{
+    padding:6px 12px;
+    border-radius:8px;
+    background:var(--paper-2);
+    font-size:12.5px;
+    font-weight:600;
+    color:#5a5346;
+    cursor:pointer;
+    border:1px solid transparent;
+  }
+  .region-tab.active{
+    background:var(--leaf-deep);
+    color:#fff;
+  }
+
+  /* ---------- PLACE CARD ---------- */
+  .place-card{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    margin-bottom:12px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+  }
+  .place-photo{
+    height:110px;
+    background:linear-gradient(135deg, var(--sand), var(--paper-2));
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:38px;
+    position:relative;
+  }
+  .place-tag{
+    position:absolute;
+    top:10px; left:10px;
+    background:rgba(30,42,34,.75);
+    color:#fff;
+    font-size:10.5px;
+    font-weight:700;
+    padding:3px 9px;
+    border-radius:20px;
+  }
+  .place-body{
+    padding:13px 14px 14px;
+  }
+  .place-name{
+    font-size:15.5px;
+    font-weight:700;
+    margin:0 0 3px;
+  }
+  .place-menu{
+    font-size:12.5px;
+    color:var(--terracotta);
+    font-weight:600;
+    margin-bottom:6px;
+  }
+  .place-addr{
+    font-size:11.5px;
+    color:#8a8272;
+    line-height:1.5;
+    margin-bottom:10px;
+  }
+  .place-actions{
+    display:flex;
+    gap:8px;
+  }
+  .map-btn{
+    flex:1;
+    text-align:center;
+    padding:8px 0;
+    background:var(--paper-2);
+    border-radius:8px;
+    font-size:12.5px;
+    font-weight:700;
+    color:var(--leaf-deep);
+    text-decoration:none;
+    border:none;
+    cursor:pointer;
+  }
+  .rating-badge{
+    font-size:11px;
+    font-weight:700;
+    color:var(--gold);
+  }
+  .dist-badge{
+    font-size:11px;
+    font-weight:700;
+    color:var(--leaf-deep);
+    background:var(--paper-2);
+    padding:2px 8px;
+    border-radius:10px;
+  }
+  .loc-bar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:8px;
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:10px 12px;
+    margin-bottom:14px;
+    font-size:12.5px;
+  }
+  .loc-status{color:#6b6355;font-weight:600;}
+  .loc-btn{
+    padding:7px 13px;
+    background:var(--leaf-deep);
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    font-size:12px;
+    font-weight:700;
+    cursor:pointer;
+    white-space:nowrap;
+  }
+  .loc-btn.on{background:var(--terracotta);}
+  .sort-toggle{
+    display:flex;
+    gap:6px;
+    margin-bottom:12px;
+  }
+  .sort-btn{
+    flex:1;
+    text-align:center;
+    padding:8px 0;
+    border-radius:8px;
+    border:1.5px solid var(--line);
+    background:var(--white);
+    font-size:12.5px;
+    font-weight:700;
+    color:#6b6355;
+    cursor:pointer;
+  }
+  .sort-btn.active{
+    background:var(--leaf-deep);
+    border-color:var(--leaf-deep);
+    color:#fff;
+  }
+
+  /* ---------- ITINERARY ---------- */
+  .day-selector{
+    display:flex;
+    gap:6px;
+    overflow-x:auto;
+    padding-bottom:10px;
+    margin-bottom:14px;
+    scrollbar-width:none;
+  }
+  .day-selector::-webkit-scrollbar{display:none;}
+  .day-pill{
+    flex:0 0 auto;
+    width:52px;
+    height:58px;
+    border-radius:12px;
+    background:var(--white);
+    border:1.5px solid var(--line);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    font-size:11px;
+    color:#8a8272;
+    font-weight:600;
+    position:relative;
+  }
+  .day-pill .d-date{font-size:13px;font-weight:800;color:var(--ink);margin-top:2px;}
+  .day-pill.active{
+    background:var(--leaf-deep);
+    border-color:var(--leaf-deep);
+  }
+  .day-pill.active .d-date, .day-pill.active{color:#fff;}
+  .day-pill.done::after{
+    content:"✓";
+    position:absolute;
+    top:-6px; right:-6px;
+    width:18px;height:18px;
+    background:var(--terracotta);
+    color:#fff;
+    border-radius:50%;
+    font-size:11px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+  }
+
+  .day-header{
+    background:var(--leaf-deep);
+    color:#fff;
+    padding:14px 16px;
+    border-radius:var(--radius) var(--radius) 0 0;
+  }
+  .day-header-region{font-size:11px;opacity:.8;font-weight:600;letter-spacing:0.3px;}
+  .day-header-title{font-size:17px;font-weight:700;margin-top:2px;}
+
+  .timeline{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-top:none;
+    border-radius:0 0 var(--radius) var(--radius);
+    padding:6px 16px 14px;
+    margin-bottom:20px;
+  }
+  .t-item{
+    display:flex;
+    gap:12px;
+    padding:12px 0;
+    border-bottom:1px dashed var(--line);
+  }
+  .t-item:last-child{border-bottom:none;}
+  .t-time{
+    flex:0 0 52px;
+    font-size:11.5px;
+    font-weight:700;
+    color:var(--terracotta);
+    padding-top:2px;
+  }
+  .t-content{flex:1;}
+  .t-name{font-size:14.5px;font-weight:700;margin-bottom:3px;}
+  .t-blurb{font-size:12px;color:#71695a;line-height:1.5;}
+  .t-check{
+    flex:0 0 24px;
+    height:24px;
+    border-radius:50%;
+    border:2px solid var(--line);
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:13px;
+    color:transparent;
+    margin-top:2px;
+  }
+  .t-check.checked{
+    background:var(--leaf);
+    border-color:var(--leaf);
+    color:#fff;
+  }
+
+  .complete-btn{
+    width:100%;
+    padding:14px;
+    background:var(--terracotta);
+    color:#fff;
+    border:none;
+    border-radius:12px;
+    font-size:14.5px;
+    font-weight:700;
+    cursor:pointer;
+    margin-top:4px;
+  }
+  .complete-btn.done{
+    background:var(--paper-2);
+    color:var(--leaf-deep);
+  }
+
+  /* ---------- SHOPPING ---------- */
+  .shop-item{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:12px 14px;
+    margin-bottom:10px;
+    display:flex;
+    gap:12px;
+    align-items:flex-start;
+  }
+  .shop-emoji{font-size:26px;flex:0 0 auto;}
+  .shop-name{font-size:14px;font-weight:700;}
+  .shop-price{font-size:12px;color:var(--terracotta);font-weight:700;margin:2px 0 4px;}
+  .shop-note{font-size:11.5px;color:#8a8272;line-height:1.5;}
+
+  /* ---------- ALBUM ---------- */
+  .album-upload{
+    border:2px dashed var(--line);
+    border-radius:14px;
+    padding:24px 16px;
+    text-align:center;
+    background:var(--white);
+    margin-bottom:18px;
+  }
+  .album-upload input{display:none;}
+  .upload-label{
+    display:inline-block;
+    padding:11px 22px;
+    background:var(--leaf-deep);
+    color:#fff;
+    border-radius:10px;
+    font-size:13.5px;
+    font-weight:700;
+    cursor:pointer;
+    margin-top:8px;
+  }
+  .album-day-group{margin-bottom:22px;}
+  .album-day-label{
+    font-size:13.5px;
+    font-weight:700;
+    color:var(--leaf-deep);
+    margin-bottom:8px;
+    padding-left:2px;
+  }
+  .album-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:6px;
+  }
+  .album-photo{
+    aspect-ratio:1;
+    border-radius:8px;
+    overflow:hidden;
+    position:relative;
+    background:var(--paper-2);
+  }
+  .album-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+  .album-photo .del{
+    position:absolute;top:4px;right:4px;
+    width:20px;height:20px;
+    background:rgba(0,0,0,.55);
+    color:#fff;
+    border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-size:12px;
+    cursor:pointer;
+  }
+  .empty-state{
+    text-align:center;
+    padding:40px 20px;
+    color:#a49a86;
+    font-size:13px;
+  }
+
+  /* ---------- BOTTOM NAV ---------- */
+  .bottom-nav{
+    position:sticky;
+    bottom:0;
+    background:var(--white);
+    border-top:1px solid var(--line);
+    display:flex;
+    padding:8px 4px calc(8px + env(safe-area-inset-bottom));
+    max-width:480px;
+    margin:0 auto;
+  }
+  .nav-btn{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:4px;
+    padding:8px 0;
+    background:none;
+    border:none;
+    cursor:pointer;
+    color:#a49a86;
+    font-size:12.5px;
+    font-weight:700;
+  }
+  .nav-btn.active{color:var(--terracotta);}
+  .nav-icon{font-size:26px;line-height:1;}
+
+  .view{display:none;}
+  .view.active{display:block;animation:fadein .25s ease;}
+  @keyframes fadein{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+
+  ::-webkit-scrollbar{width:0;height:0;}
+
+  /* ---------- WEATHER CARD ---------- */
+  .weather-card{
+    background:linear-gradient(135deg, #7ea8c4, #5c8ab0);
+    color:#fff;
+    border-radius:14px;
+    padding:14px 16px;
+    margin-bottom:16px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .weather-left{display:flex;align-items:center;gap:10px;}
+  .weather-icon{font-size:32px;}
+  .weather-temp{font-size:22px;font-weight:800;}
+  .weather-region{font-size:11.5px;opacity:.85;}
+  .weather-right{text-align:right;font-size:11px;opacity:.9;line-height:1.5;}
+  .weather-select{
+    margin-top:8px;
+    font-size:11px;
+    background:rgba(255,255,255,.2);
+    border:none;
+    color:#fff;
+    padding:4px 8px;
+    border-radius:6px;
+  }
+  .weather-select option{color:#1e2a22;}
+
+  /* ---------- DAY MAP BUTTON ---------- */
+  .day-map-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:6px;
+    width:100%;
+    padding:11px;
+    background:var(--leaf);
+    color:#fff;
+    border:none;
+    border-radius:10px;
+    font-size:13px;
+    font-weight:700;
+    cursor:pointer;
+    margin-bottom:12px;
+    text-decoration:none;
+  }
+
+  /* ---------- LOCAL NAME TAG ---------- */
+  .local-tag{
+    font-size:11px;
+    color:var(--gold);
+    font-weight:600;
+    margin-top:2px;
+    font-style:italic;
+  }
+
+  .place-actions{gap:6px;}
+  .goto-btn{
+    flex:1;
+    text-align:center;
+    padding:8px 0;
+    background:var(--leaf-deep);
+    color:#fff;
+    border-radius:8px;
+    font-size:12.5px;
+    font-weight:700;
+    text-decoration:none;
+    border:none;
+    cursor:pointer;
+  }
+  .info-btn{
+    flex:0 0 44px;
+    text-align:center;
+    padding:8px 0;
+    background:var(--sand);
+    color:var(--ink);
+    border-radius:8px;
+    font-size:14px;
+    font-weight:700;
+    border:none;
+    cursor:pointer;
+  }
+
+  /* ---------- MODAL ---------- */
+  .modal-overlay{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(20,16,8,.55);
+    z-index:100;
+    align-items:flex-end;
+    justify-content:center;
+  }
+  .modal-overlay.open{display:flex;}
+  .modal-sheet{
+    width:100%;
+    max-width:480px;
+    background:var(--white);
+    border-radius:20px 20px 0 0;
+    padding:22px 20px calc(24px + env(safe-area-inset-bottom));
+    max-height:82vh;
+    overflow-y:auto;
+    animation:slideup .25s ease;
+  }
+  @keyframes slideup{from{transform:translateY(30px);opacity:0;}to{transform:translateY(0);opacity:1;}}
+  .modal-handle{
+    width:36px;height:4px;
+    background:var(--line);
+    border-radius:3px;
+    margin:0 auto 16px;
+  }
+  .modal-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:4px;}
+  .modal-title{font-size:19px;font-weight:800;}
+  .modal-close{
+    background:var(--paper-2);
+    border:none;
+    width:28px;height:28px;
+    border-radius:50%;
+    font-size:14px;
+    cursor:pointer;
+    color:#6b6355;
+  }
+  .modal-local{font-size:13px;color:var(--gold);font-style:italic;margin-bottom:14px;}
+  .modal-photo{
+    height:130px;
+    border-radius:12px;
+    background:linear-gradient(135deg, var(--sand), var(--paper-2));
+    display:flex;align-items:center;justify-content:center;
+    font-size:46px;
+    margin-bottom:14px;
+  }
+  .modal-row{
+    display:flex;
+    gap:10px;
+    padding:10px 0;
+    border-bottom:1px solid var(--paper-2);
+  }
+  .modal-row-label{flex:0 0 68px;font-size:12px;color:#8a8272;font-weight:700;padding-top:1px;}
+  .modal-row-value{flex:1;font-size:13.5px;line-height:1.6;}
+  .modal-desc{
+    font-size:13px;
+    line-height:1.7;
+    color:#4a4536;
+    margin:14px 0;
+    padding:12px;
+    background:var(--paper);
+    border-radius:10px;
+  }
+  .modal-actions{display:flex;gap:8px;margin-top:16px;}
+  .modal-actions a, .modal-actions button{
+    flex:1;
+    text-align:center;
+    padding:12px 0;
+    border-radius:10px;
+    font-size:13.5px;
+    font-weight:700;
+    text-decoration:none;
+    border:none;
+    cursor:pointer;
+  }
+  .modal-btn-map{background:var(--leaf-deep);color:#fff;}
+  .modal-btn-go{background:var(--terracotta);color:#fff;}
+
+  /* ---------- EXPENSE (경비) ---------- */
+  .sticky-total{
+    position:sticky; top:57px; z-index:15;
+    background:var(--leaf-deep);
+    color:#fff;
+    display:flex;
+    justify-content:space-around;
+    padding:10px 8px;
+    margin:-18px -16px 16px;
+  }
+  .sticky-item{text-align:center;}
+  .sticky-lbl{font-size:9px;opacity:.75;letter-spacing:.05em;margin-bottom:2px;}
+  .sticky-val{font-size:14.5px;font-weight:800;}
+
+  .fx-card{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    overflow:hidden;
+    margin-bottom:16px;
+  }
+  .fx-head{
+    background:linear-gradient(135deg, var(--leaf-deep), var(--leaf));
+    padding:13px 16px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+  .fx-title{color:#fff;font-size:13px;font-weight:700;}
+  .fx-rate-row{display:flex;align-items:center;gap:6px;font-size:10.5px;color:rgba(255,255,255,.75);}
+  .fx-rate-in{width:70px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);border-radius:5px;padding:4px 6px;color:#fff;font-size:12px;font-weight:700;text-align:right;}
+  .fx-body{display:grid;grid-template-columns:1fr 40px 1fr;padding:14px;gap:6px;align-items:center;}
+  .fx-col-lbl{font-size:9.5px;font-weight:700;color:#8a8272;margin-bottom:6px;text-transform:uppercase;}
+  .fx-in{width:100%;border:1.5px solid var(--line);border-radius:8px;padding:9px 10px;font-size:16px;font-weight:700;text-align:right;}
+  .fx-swap-btn{width:30px;height:30px;border-radius:50%;border:1px solid var(--line);background:var(--paper);font-size:13px;cursor:pointer;}
+  .fx-quick-row{display:flex;flex-wrap:wrap;gap:5px;padding:0 14px 14px;}
+  .fx-qbtn{background:var(--paper-2);border:1px solid var(--line);border-radius:6px;padding:5px 9px;font-size:10.5px;font-weight:600;cursor:pointer;color:#5a5346;}
+
+  .exp-card{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:13px 14px;margin-bottom:12px;}
+  .exp-day-lbl{font-size:13px;font-weight:800;margin-bottom:8px;color:var(--leaf-deep);}
+  .exp-cols{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  .exp-col-title{font-size:10.5px;font-weight:700;margin-bottom:6px;}
+  .exp-item{display:flex;justify-content:space-between;align-items:center;background:var(--paper);border-radius:6px;padding:5px 8px;margin-bottom:4px;font-size:11px;}
+  .exp-item .amt{font-weight:700;white-space:nowrap;margin-left:6px;}
+  .exp-add-row{display:flex;gap:4px;margin-top:4px;}
+  .exp-add-row input{flex:1;min-width:0;border:1px solid var(--line);border-radius:6px;padding:5px 6px;font-size:11px;}
+  .exp-add-row button{flex:0 0 auto;background:var(--ink);color:#fff;border:none;border-radius:6px;padding:5px 9px;font-size:12px;cursor:pointer;}
+  .exp-day-total{display:flex;justify-content:space-between;margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);font-size:12px;font-weight:700;}
+
+  .tax-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:16px;margin-bottom:16px;}
+  .tax-presets{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px;}
+  .tax-pbtn{background:var(--paper-2);border:1px solid var(--line);border-radius:6px;padding:5px 10px;font-size:11px;font-weight:600;cursor:pointer;}
+  .tax-pbtn.sel{background:var(--leaf-deep);color:#fff;border-color:var(--leaf-deep);}
+  .tax-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:12px;}
+  .tax-field label{font-size:9.5px;color:#8a8272;font-weight:700;display:block;margin-bottom:4px;}
+  .tax-in{width:100%;border:1.5px solid var(--line);border-radius:7px;padding:7px 8px;font-size:13px;font-weight:700;}
+  .tax-result{background:var(--paper);border-radius:10px;padding:12px 14px;}
+  .tax-row{display:flex;justify-content:space-between;padding:5px 0;font-size:12px;color:#5a5346;border-bottom:1px solid var(--paper-2);}
+  .tax-row.total{border-top:2px solid var(--ink);border-bottom:none;margin-top:4px;padding-top:8px;font-weight:800;font-size:13px;color:var(--ink);}
+
+  /* ---------- MEMO ---------- */
+  .memo-card{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:13px 14px;margin-bottom:12px;}
+  .memo-day-lbl{font-size:13px;font-weight:800;margin-bottom:8px;color:var(--leaf-deep);}
+  .memo-ta{width:100%;border:1.5px solid var(--line);border-radius:8px;padding:10px 12px;font-size:12.5px;line-height:1.6;resize:vertical;min-height:70px;font-family:inherit;}
+  .memo-bottom{display:flex;justify-content:space-between;align-items:center;margin-top:6px;}
+  .memo-count{font-size:10px;color:#a49a86;}
+  .memo-save{background:var(--leaf-deep);color:#fff;border:none;border-radius:6px;padding:5px 12px;font-size:11px;font-weight:700;cursor:pointer;}
+  .memo-saved-tag{font-size:10px;color:var(--leaf);opacity:0;transition:opacity .3s;}
+  .memo-saved-tag.show{opacity:1;}
+
+  /* ---------- LIGHTBOX ---------- */
+  .lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:200;align-items:center;justify-content:center;flex-direction:column;}
+  .lightbox.show{display:flex;}
+  .lightbox img{max-width:90vw;max-height:75vh;object-fit:contain;border-radius:6px;}
+  .lightbox-close{position:absolute;top:18px;right:18px;color:#fff;font-size:26px;background:none;border:none;cursor:pointer;}
+  .lightbox-nav{display:flex;gap:14px;margin-top:14px;}
+  .lightbox-btn{background:rgba(255,255,255,.15);color:#fff;border:none;border-radius:6px;padding:8px 18px;font-size:12.5px;cursor:pointer;}
+  .lightbox-counter{color:rgba(255,255,255,.5);font-size:11px;margin-top:8px;}
+  .photo-thumb-clickable{cursor:pointer;}
+
+  /* ============================================================
+     반응형: 태블릿/데스크톱 (768px 이상)
+     - 모바일 디자인 톤은 그대로 유지, 레이아웃만 넓게 재배치
+     ============================================================ */
+  @media (min-width: 768px){
+    body{ background:var(--paper-2); font-size:16px; }
+    #app{
+      max-width:100%;
+      min-height:100vh;
+    }
+    .topbar{
+      padding:34px 40px 26px;
+    }
+    .topbar-title{ font-size:30px; }
+    .topbar-sub{ font-size:15px; }
+    .date-chip{ font-size:13px; padding:7px 14px; }
+
+    /* 타이포/카드 전반 확대 */
+    .section-title{ font-size:20px; }
+    .section-desc{ font-size:14px; }
+    .place-name{ font-size:18px; }
+    .place-menu{ font-size:14px; }
+    .place-addr{ font-size:13px; }
+    .place-photo{ font-size:48px; }
+    .rating-badge{ font-size:13px; }
+    .local-tag{ font-size:12.5px; }
+    .day-header-title{ font-size:20px; }
+    .day-header-region{ font-size:12.5px; }
+    .t-name{ font-size:16.5px; }
+    .t-blurb{ font-size:13.5px; }
+    .t-time{ font-size:13px; flex-basis:64px; }
+    .weather-temp{ font-size:26px; }
+    .weather-region{ font-size:13px; }
+    .day-pill{ width:64px; height:68px; }
+    .day-pill .d-date{ font-size:15px; }
+    .complete-btn{ font-size:15px; padding:15px; }
+    .day-map-btn{ font-size:14.5px; padding:13px; }
+
+    /* 하단 네비 숨기고, 상단 카테고리 메뉴를 고정 가로 메뉴로 확장 */
+    .bottom-nav{ display:none; }
+    .cat-menu{
+      max-width:1100px;
+      margin:0 auto;
+      padding:14px 24px;
+      justify-content:center;
+      gap:10px;
+    }
+    .cat-btn{
+      padding:10px 20px;
+      font-size:14px;
+    }
+
+    main{
+      max-width:1100px;
+      margin:0 auto;
+      padding:26px 24px 60px;
+      width:100%;
+    }
+
+    /* 일정 탭: 좌우 2컬럼 (날짜선택+숙소+날씨 / 타임라인) */
+    #view-itinerary{
+      display:grid;
+      grid-template-columns:300px 1fr;
+      gap:24px;
+      align-items:start;
+    }
+    #view-itinerary .day-selector{
+      grid-column:1 / -1;
+      overflow-x:visible;
+      flex-wrap:wrap;
+      justify-content:center;
+    }
+    #view-itinerary .weather-card,
+    #view-itinerary > .place-card:first-of-type{
+      grid-column:1;
+    }
+    #view-itinerary .day-header,
+    #view-itinerary .timeline{
+      grid-column:2;
+    }
+    #view-itinerary .day-header{ grid-row:2; }
+    #view-itinerary .timeline{ grid-row:3; }
+    #view-itinerary #liveWeatherResult{ grid-column:1; }
+    /* 추천코스/구글맵검색/직접추가는 전체 폭으로 아래에 나란히 */
+    #view-itinerary > div[style*="margin-top:18px"],
+    #view-itinerary > div[style*="margin-top:16px"]{
+      grid-column:1 / -1;
+    }
+
+    /* 맛집/카페/마사지: 카드 그리드 */
+    #view-food, #view-cafe, #view-spa{
+      display:block;
+      font-size:0;
+    }
+    #view-food .place-card,
+    #view-cafe .place-card,
+    #view-spa .place-card{
+      display:inline-block;
+      vertical-align:top;
+      width:calc(33.33% - 11px);
+      margin-right:16px;
+      font-size:14px;
+    }
+    #view-food .place-card:nth-child(3n),
+    #view-cafe .place-card:nth-child(3n),
+    #view-spa .place-card:nth-child(3n){
+      margin-right:0;
+    }
+    #view-food .region-tabs,
+    #view-cafe .region-tabs,
+    #view-spa .region-tabs{
+      justify-content:center;
+    }
+
+    /* 쇼핑: 지역 그룹을 2열 그리드 */
+    #view-shopping{ font-size:0; }
+    #view-shopping > div[style*="margin-bottom:20px"]{
+      display:inline-block;
+      width:calc(50% - 10px);
+      vertical-align:top;
+      margin-right:20px;
+      font-size:14px;
+    }
+    #view-shopping > div[style*="margin-bottom:20px"]:nth-child(2n){
+      margin-right:0;
+    }
+
+    /* 경비 탭 */
+    .sticky-total{ max-width:1100px; margin:0 auto 16px; border-radius:12px; top:0; }
+    .fx-card, .tax-card, .exp-card{ max-width:700px; margin-left:auto; margin-right:auto; }
+    .fx-card + .tax-card{ margin-top:16px; }
+
+    /* 앨범 */
+    .album-upload{ max-width:500px; margin:0 auto 18px; }
+    #albumGroups, #view-album > div{ max-width:900px; margin-left:auto; margin-right:auto; }
+    .album-grid{ grid-template-columns:repeat(6,1fr); }
+    .memo-card{ max-width:600px; margin:0 auto; }
+    #memoDaySelect{ max-width:600px; margin-left:auto; margin-right:auto; display:block; }
+
+    .place-photo{ height:130px; font-size:44px; }
+  }
+
+  @media (min-width: 1024px){
+    #view-food .place-card,
+    #view-cafe .place-card,
+    #view-spa .place-card{
+      width:calc(25% - 12px);
+    }
+    #view-food .place-card:nth-child(3n),
+    #view-cafe .place-card:nth-child(3n),
+    #view-spa .place-card:nth-child(3n){
+      margin-right:16px;
+    }
+    #view-food .place-card:nth-child(4n),
+    #view-cafe .place-card:nth-child(4n),
+    #view-spa .place-card:nth-child(4n){
+      margin-right:0;
+    }
+  }
+.nb{margin-top:6px}.nb summary{font-size:11px;color:var(--leaf-deep);font-weight:700;cursor:pointer}
+.nb textarea,.nb input{width:100%;box-sizing:border-box;margin-top:5px;padding:7px 9px;border:1px solid var(--line);border-radius:8px;font-size:12.5px;font-family:inherit}
+.nbq{display:flex;gap:6px;flex-wrap:wrap;margin-top:5px}.nbq[hidden]{display:none}
+.nbq a{font-size:10.5px;background:var(--paper-2);color:var(--leaf-deep);padding:4px 9px;border-radius:12px;text-decoration:none;font-weight:700}
+.day-bar{background:var(--white);padding:12px 16px 0}.day-bar .day-selector{margin:0 auto;width:max-content;max-width:100%;padding-bottom:10px}
+.upload-label input{display:none;}
+</style>
+</head>
+<body>
+<div id="app">
+
+  <div class="topbar">
+    <p class="topbar-title">🌺 발리 허니문</p>
+    <p class="topbar-sub">가성비로 알차게, 우붓 · 짐바란</p>
+    <div class="topbar-dates">
+      <span class="date-chip">12.3 ✈ 인천출발</span>
+      <span class="date-chip">12.11 🛬 인천도착</span>
+      <span class="date-chip" id="syncChip" style="cursor:pointer;">🔄 일정 공유 설정</span>
+    </div>
+  </div>
+
+  <div class="day-bar" id="dayBar"></div>
+  <div class="cat-menu" id="catMenu"></div>
+
+  <main>
+    <div id="view-itinerary" class="view active"></div>
+    <div id="view-food" class="view"></div>
+    <div id="view-cafe" class="view"></div>
+    <div id="view-spa" class="view"></div>
+    <div id="view-shopping" class="view"></div>
+    <div id="view-expense" class="view"></div>
+    <div id="view-album" class="view"></div>
+    <div id="view-checklist" class="view"></div>
+  </main>
+
+  <div class="bottom-nav">
+    <button class="nav-btn active" data-nav="itinerary"><span class="nav-icon">🗓️</span>일정</button>
+    <button class="nav-btn" data-nav="food"><span class="nav-icon">🍽️</span>맛집</button>
+    <button class="nav-btn" data-nav="cafe"><span class="nav-icon">☕</span>카페</button>
+    <button class="nav-btn" data-nav="spa"><span class="nav-icon">💆</span>마사지</button>
+    <button class="nav-btn" data-nav="expense"><span class="nav-icon">💰</span>경비</button>
+    <button class="nav-btn" data-nav="album"><span class="nav-icon">📷</span>앨범</button>
+  </div>
+</div>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lbCloseBtn">✕</button>
+  <img id="lbImg" src="" alt="">
+  <div class="lightbox-nav">
+    <button class="lightbox-btn" id="lbPrevBtn">← 이전</button>
+    <button class="lightbox-btn" id="lbNextBtn">다음 →</button>
+  </div>
+  <div class="lightbox-counter" id="lbCounter"></div>
+</div>
+
+<script>
+/* ============ DATA ============ */
+
+const DAYS = [
+  {
+    id:"d1", date:"12/3", region:"이동", title:"인천 출발 · 발리 도착 대기", locked:true,
+    items:[
+      {time:"10:00", name:"자택 출발 → 인천공항 이동", blurb:"집에서 인천공항으로 출발", emoji:"🏠"},
+      {time:"16:20", name:"인천공항 출발 (KE431)", blurb:"대한항공 KE431, 발리 도착은 현지시간 22~23시경", emoji:"✈️"},
+      {time:"22:00~23:00", name:"응우라라이 공항 도착", blurb:"입국수속·수하물 수령", emoji:"🛬", lat:-8.74699, lng:115.16817},
+      {time:"23:00~01:00", name:"공항 카페에서 대기", blurb:"지프투어 새벽 픽업까지 공항 내 24시간 카페 이용", emoji:"☕"}
+    ]
+  },
+  {
+    id:"d2", date:"12/4", region:"우붓 입성일", title:"새벽 지프투어 → 카자네 무아 체크인", locked:true,
+    items:[
+      {time:"01:00~02:00", name:"지프투어 픽업 (예약 예정)", blurb:"새벽 1~2시 사이 픽업 가능한 업체로 예약 예정 — 예약 완료되면 여기 시간/업체명 추가", emoji:"🚙", isPlaceholder:true, slotType:"tour"},
+      {time:"투어 중", name:"카페 or 점심 (투어 포함)", blurb:"지프투어 코스 내 카페/식사로 해결 예정", emoji:"🍽️", isPlaceholder:true, slotType:"meal"},
+      {time:"오후", name:"카자네 무아 우붓 체크인", blurb:"몽키포레스트 거리, 우붓 중심가 — 도보로 몽키포레스트·아트마켓 이용 가능", emoji:"🏡", lat:-8.5090, lng:115.2617}
+    ]
+  },
+  {
+    id:"d3", date:"12/5", region:"우붓 Day2", title:"일정 추가 예정", empty:true},
+  {
+    id:"d4", date:"12/6", region:"우붓 Day3", title:"11:30 Uma Dawa Resort and Spa",
+    items:[
+      {time:"11:30", name:"Uma Dawa Resort and Spa (퍼피요)", blurb:"지도에 저장하신 12/6 11:30 일정", emoji:"🌿", lat:-8.49464, lng:115.27339}
+    ]},
+  {
+    id:"d5", date:"12/7", region:"우붓→짐바란 이동일", title:"체크아웃 → 아야나 세가라 체크인", locked:true,
+    items:[
+      {time:"오전", name:"카자네 무아 체크아웃", blurb:"우붓 숙박 마지막 날", emoji:"🧳"},
+      {time:"이동", name:"우붓 → 짐바란 이동", blurb:"차량 약 1~1.5시간", emoji:"🚗"},
+      {time:"오후", name:"아야나 세가라 발리 체크인", blurb:"짐바란 절벽 위 리조트, 락바·인피니티풀·해변 이용 가능", emoji:"🏖️", lat:-8.7900, lng:115.1601}
+    ]
+  },
+  {
+    id:"d6", date:"12/8", region:"짐바란 Day2", title:"일정 추가 예정", empty:true},
+  {
+    id:"d7", date:"12/9", region:"짐바란 Day3", title:"일정 추가 예정", empty:true},
+  {
+    id:"d8", date:"12/10", region:"짐바란 → 짱구·스미냑 → 공항", title:"체크아웃 → 쇼핑 → 산타이라운지 → 공항",
+    items:[
+      {time:"오전", name:"아야나 세가라 체크아웃", blurb:"짐바란 마지막 아침 — 체크아웃 후 짱구·스미냑 방면으로 이동", emoji:"🧳"},
+      {time:"이동", name:"짐바란 → 짱구·스미냑 이동", blurb:"체크아웃 후 차량으로 이동", emoji:"🚗"},
+      {time:"식사", name:"MILU By Nook (짱구)", blurb:"지도에 '마지막날 음식점'으로 저장하신 곳 — 논밭뷰, 발리식·양식 메뉴", emoji:"🍽️", lat:-8.66047, lng:115.14409},
+      {time:"오후", name:"짱구·스미냑 쇼핑", blurb:"자유 쇼핑 — 가고 싶은 샵이 정해지면 아래에서 일정으로 추가하세요", emoji:"🛍️"},
+      {time:"17:00~18:00", name:"산타이라운지 (Santai Lounge) 이용", blurb:"라운지에서 정비하고 쉬기 — 이용권은 전날까지 고민 후 출발 직전 예약 예정", emoji:"🛋️", lat:-8.73795, lng:115.18016, url:"https://experiences.myrealtrip.com/products/4637207", urlLabel:"마이리얼트립 이용권 예약"},
+      {time:"21:00~22:00", name:"응우라라이 공항 도착", blurb:"국제선 체크인·출국 수속 — 01:20 인천행 탑승", emoji:"🛫", lat:-8.74699, lng:115.16817}
+    ]},
+  {
+    id:"d9", date:"12/11", region:"귀국일", title:"01:20 인천행 출발 → 09:00 인천 도착", locked:true,
+    items:[
+      {time:"01:20", name:"인천행 출발 (대한항공)", blurb:"12/10 밤 공항 도착 후 출국 수속 → 탑승", emoji:"✈️"},
+      {time:"09:00", name:"인천국제공항 도착", blurb:"입국 수속 후 귀가", emoji:"🛬"}
+    ]}
+];
+
+/* 추천 코스 — 사용자가 빈 일정에 "추가"할 수 있는 후보 목록 */
+const SUGGESTED_COURSES = {
+  d3: [ // 우붓 Day2
+    {time:"08:00", name:"리빙스톤 홀리그라운드", blurb:"버터 크루아상 브런치, 도보 가능 거리", emoji:"🥐", link:"cafe", place:"Livingstone Holyground"},
+    {time:"10:00", name:"몽키포레스트 & 우붓시장 산책", blurb:"숙소에서 도보 5~10분, 흥정은 부르는 값 30%부터", emoji:"🐒"},
+    {time:"13:00", name:"메구나 (Meguna)", blurb:"몽키포레스트 거리, 사테+비건메뉴", emoji:"🥗", link:"food", place:"Meguna"},
+    {time:"15:30", name:"우붓 트래디셔널 스파", blurb:"발리 전통마사지 90분, 웰컴드링크 포함", emoji:"💆‍♀️", link:"spa", place:"Ubud Traditional Spa"},
+    {time:"19:00", name:"디스 이즈 발리", blurb:"가성비 발리 가정식, 1인 6천원대", emoji:"🍛", link:"food", place:"This Is Bali"}
+  ],
+  d4: [ // 우붓 Day3
+    {time:"08:00", name:"세니만 커피", blurb:"우붓 대표 로스터리, 콜드브루 티 세트", emoji:"☕", link:"cafe", place:"Seniman Coffee"},
+    {time:"10:00", name:"테갈랄랑 라이스테라스", blurb:"계단식 논 + 스윙 포토존, 차량 20분", emoji:"🌾"},
+    {time:"13:00", name:"후마 카페 by 골드마인", blurb:"논밭뷰 브런치 카페", emoji:"🌾", link:"cafe", place:"Huma Cafe by Goldmine"},
+    {time:"15:00", name:"누사테라피 발마사지", blurb:"발마사지 명성, 가성비 최고", emoji:"🦶", link:"spa", place:"NUSA THERAPY"},
+    {time:"19:00", name:"아카르 우붓 (K클럽)", blurb:"신혼여행 스페셜 디너, 논밭뷰 파인다이닝", emoji:"🥂", link:"food", place:"Akar Ubud by K Club"}
+  ],
+  d6: [ // 짐바란 Day2
+    {time:"10:00", name:"짐바란 비치 & 해산물시장", blurb:"현지 어시장 구경", emoji:"🐟"},
+    {time:"12:00", name:"아야나 리조트 내 수영장 투어", blurb:"트램으로 아야나·림바 부대시설 이용", emoji:"🏊"},
+    {time:"15:00", name:"칼마 스파 짐바란", blurb:"픽업서비스 포함, 커플마사지", emoji:"💆", link:"spa", place:"The Calma Spa Bali"},
+    {time:"18:00", name:"락바 선셋 (아야나 내)", blurb:"우선입장 가능, 절벽 위 선셋 명소", emoji:"🌅"},
+    {time:"19:30", name:"와룽 짐바란 가든", blurb:"가성비 로컬 해산물 와룽, 2인 2만원대", emoji:"🍤", link:"food", place:"Warung Jimbaran Garden"}
+  ],
+  d7: [ // 짐바란 Day3
+    {time:"10:00", name:"울루와뚜 사원 투어", blurb:"짐바란에서 차량 20~30분, 절벽사원+케착댄스", emoji:"🛕"},
+    {time:"13:00", name:"빙인비치 근처 카페", blurb:"서핑비치 뷰 맛집거리", emoji:"🏄"},
+    {time:"16:00", name:"아야나 스파 (리버풀 근처)", blurb:"리조트 내 스파, 이동 없이 이용 가능", emoji:"🧖‍♀️"},
+    {time:"19:00", name:"바왕메라 비치프론트", blurb:"선셋뷰 시푸드, 라이브밴드 공연", emoji:"🦐", link:"food", place:"Bawang Merah Beachfront"}
+  ],
+  d8: [ // 12/10 체크아웃 → 짱구·스미냑 → 공항
+    {time:"오후", name:"Beachwalk 쇼핑센터 (꾸따)", blurb:"공항 가는 길에 들르기 좋은 오픈에어 몰 — 선택사항", emoji:"🛍️", link:"shopping"}
+  ]
+};
+
+const FOOD = [
+  {region:"우붓", name:"Bali-Jip Ubud (발리집)", local:"\"발리 집\" — 한국어 그대로, '발리에 있는 우리집'이라는 뜻", menu:"대표메뉴: 삼겹살 구이 정식", addr:"Jl. Raya Sanggingan No.40, Kedewatan, Ubud", rating:"4.8", emoji:"🍖", lat:-8.4978315, lng:115.252944,
+    desc:"한국인 셰프가 운영하는 한식당으로, 발리 여행 중 한식이 그리울 때 찾기 좋은 곳이에요. 삼겹살에 쌈채소, 반찬이 함께 나와 든든하게 먹을 수 있고 현지 교민들도 즐겨 찾습니다. 우붓 중심가에서 차로 15분 정도 떨어진 상긴간 지역에 있어요."},
+  {region:"우붓", name:"Meguna", local:"'므구나' — 발리어로 '자연스러운, 편안한'이라는 뜻", menu:"대표메뉴: 민스 비프 사테, 코코넛워터", addr:"Jl. Monkey Forest, Ubud", rating:"4.7", emoji:"🥗", lat:-8.5180844, lng:115.262188,
+    desc:"몽키포레스트 거리 한복판에 있어 관광 중 들르기 좋아요. 채식·비건 메뉴 선택지가 다양하고, 신선한 재료를 쓴다는 평이 많습니다. 야외 좌석에서 거리 풍경을 보며 식사할 수 있어요."},
+  {region:"우붓", name:"This Is Bali", local:"영문 그대로 '이게 진짜 발리야'라는 뜻의 상호", menu:"대표메뉴: 빌드유어오운 나시짬뿌르", addr:"Jl. Goutama No.2, Ubud", rating:"4.9", emoji:"🍛", lat:-8.5081513, lng:115.2642473,
+    desc:"나시짬뿌르(백반처럼 여러 반찬을 골라 담는 발리 가정식)를 원하는 만큼 골라 담을 수 있어 가성비가 뛰어나요. 현지인들도 많이 찾는 로컬 맛집으로, 1인 6천원대에 푸짐하게 먹을 수 있습니다."},
+  {region:"우붓", name:"Akar Ubud by K Club", local:"'아카르'는 인도네시아어로 '뿌리(root)'라는 뜻", menu:"대표메뉴: 호주산 안심 스테이크", addr:"K Club, Jl. Raya Cebok, Tegallalang", rating:"4.8", emoji:"🥂", lat:-8.4414377, lng:115.2859705,
+    desc:"테갈랄랑 라이스테라스 근처 고급 리조트 내 파인다이닝으로, 논밭 전망을 보며 식사할 수 있어요. 신혼여행 기념일 저녁으로 딱 좋은 분위기이며, 사전 예약을 추천합니다."},
+  {region:"우붓", name:"Pison Ubud 맛집", local:"직접 저장하신 장소 · 우붓 원숭이숲 근처 인기 맛집", menu:"대표메뉴: 트러플 스테이크, 발리니즈 크리스피덕 볶음밥, 오향 옥스테일 볶음밥", addr:"Jl. Hanoman No.10X, Ubud", rating:"4.4", emoji:"🥩", lat:-8.518258099999999, lng:115.2636643,
+    desc:"논밭 전망을 보며 서양식과 인도네시아식이 섞인 퓨전 요리를 즐길 수 있는 우붓 핫플이에요. 트러플 스테이크와 크리스피덕 볶음밥이 인기 메뉴이고, SNS에서 유명해 사진 찍기도 좋아요. 가격대는 1인 1만원대 중반입니다."},
+  {region:"우붓", name:"Compound Warung 우붓음식점", local:"직접 저장하신 장소 · 발리 가정식 와룽", menu:"대표메뉴: 나시짬뿌르, 폭립, 두부/템페 사테", addr:"Jl. Goutama No.6, Ubud", rating:"4.7", emoji:"🍚", lat:-8.5087039, lng:115.2642048,
+    desc:"전통 발리 가정집을 개조한 아늑한 정원 레스토랑이에요. 나시짬뿌르와 폭립이 인기 메뉴이고 비건·글루텐프리 옵션도 있어요. 가격대는 1인 3천~5천원 수준으로 가성비가 좋고, 예약을 추천합니다."},
+  {region:"짐바란", name:"Warung Jimbaran Garden", local:"'와룽'은 인도네시아어로 '작은 식당, 노점'을 뜻함", menu:"대표메뉴: 해산물 플래터 (2인)", addr:"Jl. Pemelisan Agung, Jimbaran", rating:"4.8", emoji:"🍤", lat:-8.7705228, lng:115.1688509,
+    desc:"현지인이 운영하는 가성비 좋은 해산물 와룽이에요. 생선, 새우, 오징어 등을 골라 그릴로 구워주며 삼발소스가 일품입니다. 짐바란 해변 대형 레스토랑보다 훨씬 저렴하면서 맛은 뒤지지 않아요."},
+  {region:"짐바란", name:"Bawang Merah Beachfront", local:"'바왕 메라'는 인도네시아어로 '적양파'라는 뜻", menu:"대표메뉴: 점보새우, 블랙라이스푸딩", addr:"Jl. Pantai Kelan, Tuban", rating:"4.6", emoji:"🦐", lat:-8.7556218, lng:115.1669882,
+    desc:"짐바란 해변에 테이블을 놓고 노을을 보며 식사하는 대표적인 시푸드 레스토랑이에요. 저녁시간엔 라이브밴드와 발리 전통 댄스 공연도 볼 수 있어 신혼여행 분위기 내기 좋습니다."},
+  {region:"짐바란", name:"Menega Cafe", local:"짐바란 해변가 시푸드 레스토랑 중 원조격으로 꼽히는 곳", menu:"대표메뉴: 그릴드 시푸드 세트, 랍스터", addr:"Jl. Pantai Kedonganan, Jimbaran", rating:"4.5", emoji:"🦞", lat:-8.7681, lng:115.1668,
+    desc:"짐바란 해변 시푸드 레스토랑 거리에서 가장 오래되고 유명한 곳 중 하나예요. 해변에 발을 맞대고 노을을 보며 그릴드 시푸드를 즐길 수 있어 신혼여행 저녁 코스로 인기가 많습니다."},
+  {region:"짱구", name:"MILU By Nook", local:"직접 저장하신 장소 · 지도에 '마지막날 음식점'으로 표시", menu:"대표메뉴: 나시짬뿌르, 연어 파스타, 버거 (발리식+양식)", addr:"Jl. Pantai Berawa No.99X, Canggu", emoji:"🍽️", lat:-8.66047, lng:115.14409,
+    desc:"짱구 베라와 지역의 논밭뷰 식당으로, NOOK 그룹이 운영하는 곳이에요. 나시짬뿌르 같은 발리 음식부터 파스타·버거까지 메뉴가 넓고, 인테리어가 예쁘고 가격 대비 만족도가 좋다는 평이 많습니다. 12/10 짱구 쇼핑 중 식사 장소로 넣어둔 곳이에요."},
+  {region:"짐바란", name:"AYANA 리조트 내 락바", local:"'락바(Rock Bar)'는 절벽 바위 위에 지은 바라는 뜻", menu:"대표메뉴: 칵테일, 스낵 플래터", addr:"AYANA Resort, Jl. Karang Mas Sejahtera, Jimbaran", rating:"4.7", emoji:"🌅", lat:-8.7900, lng:115.1601,
+    desc:"아야나 리조트 투숙객이라면 우선입장 가능한 절벽 위 선셋 명소예요. 칵테일 한 잔과 함께 인도양 노을을 감상할 수 있어 신혼여행 인생샷 스팟으로도 유명합니다."},
+];
+
+const CAFE = [
+  {region:"우붓", name:"Livingstone Holyground", local:"'홀리그라운드' — 영어로 '신성한 땅'이라는 뜻", menu:"대표메뉴: 버터 크루아상, 스크램블에그토스트", addr:"Jl. Raya Andong No.88x, Peliatan, Ubud", rating:"4.8", emoji:"🥐", lat:-8.5046923, lng:115.2721383,
+    desc:"빵과 페이스트리를 직접 굽는 베이커리 카페로, 버터향 가득한 크루아상이 유명해요. 우붓 중심가에서 조금 떨어져 있어 한적하게 브런치를 즐기기 좋습니다."},
+  {region:"우붓", name:"Seniman Coffee", local:"'세니만'은 인도네시아어로 '예술가'라는 뜻", menu:"대표메뉴: 킨타마니 커피, 콜드브루 티 테이스팅", addr:"Jl. Sri Wedari No.5, Ubud", rating:"4.6", emoji:"☕", lat:-8.5067234, lng:115.2651548,
+    desc:"우붓을 대표하는 로컬 로스터리로, 발리 킨타마니 지역 원두를 직접 로스팅해요. 커피 애호가라면 꼭 들러볼 만한 스페셜티 커피 전문점입니다."},
+  {region:"우붓", name:"Huma Cafe by Goldmine", local:"'후마'는 옛 발리어로 '논, 밭'을 뜻함", menu:"대표메뉴: 아보카도 샐러드, 트로피칼라 마차", addr:"Jalan Cinta, Tegallalang", rating:"4.7", emoji:"🌾", lat:-8.4610161, lng:115.2721347,
+    desc:"테갈랄랑 라이스테라스를 내려다보며 브런치를 즐길 수 있는 뷰맛집 카페예요. 이름처럼 논밭 전망이 인상적이라 사진 찍기도 좋습니다."},
+  {region:"짐바란", name:"Sisi Bali Restaurant & Bar", local:"'시시'는 인도네시아어로 '옆, 측면'이라는 뜻", menu:"대표메뉴: 아보카도토스트, 코코넛커피", addr:"Jl. Uluwatu, Jimbaran", rating:"4.6", emoji:"🥑", lat:-8.7912, lng:115.1685,
+    desc:"짐바란 지역의 뷰 좋은 브런치 카페로, 여유롭게 아침 식사를 즐기기 좋아요. 절벽 지형을 활용한 전망이 인상적입니다."},
+  {region:"짐바란", name:"Karma Beach Bali Cafe", local:"'카르마'는 산스크리트어로 '업, 인과응보'라는 뜻", menu:"대표메뉴: 트로피컬 스무디볼, 씨푸드 파스타", addr:"Jl. Karma Kandara, Ungasan (짐바란 인근)", rating:"4.7", emoji:"🌺", lat:-8.8319, lng:115.1687,
+    desc:"짐바란에서 차로 15~20분 거리의 프라이빗 비치클럽 카페예요. 특별한 날 멀리 나가서 한적한 해변뷰를 즐기고 싶을 때 추천합니다."},
+];
+
+const SPA = [
+  {region:"우붓", name:"Ubud Traditional Spa", local:"이름 그대로 '우붓 전통 스파'", menu:"발리 전통마사지 90분 (웰컴드링크+족욕 포함)", addr:"Jl. RSI Markandya II, Payogan, Kedewatan", rating:"4.9", emoji:"💆‍♀️", lat:-8.477359, lng:115.2533,
+    desc:"전통 발리니즈 마사지 기법을 그대로 재현한 스파로, 웰컴드링크와 족욕까지 포함된 풀코스예요. 강가 계곡뷰가 있는 조용한 위치라 힐링하기 좋습니다."},
+  {region:"우붓", name:"NUSA THERAPY", local:"'누사'는 인도네시아어로 '섬(island)'이라는 뜻", menu:"발마사지 & 전신마사지, 허브드링크 포함", addr:"Jl. Raya Ubud No.5, Banjar Taman Kaja", rating:"4.8", emoji:"🦶", lat:-8.5084368, lng:115.2663018,
+    desc:"발마사지로 특히 유명한 곳으로, 우붓 중심가에서 걸어갈 수 있는 위치라 접근성이 좋아요. 가격 대비 만족도가 높다는 후기가 많습니다."},
+  {region:"짐바란", name:"The Calma Spa Bali", local:"'칼마'는 스페인/이탈리아어 계열로 '고요함'을 연상시키는 이름", menu:"커플마사지, 짐바란 지역 무료 픽업/드롭", addr:"Jl. Uluwatu II No.108X, Jimbaran", rating:"4.9", emoji:"💆", lat:-8.7841784, lng:115.1709977,
+    desc:"짐바란 지역 내 무료 픽업 서비스를 제공해 이동이 편리해요. 커플 마사지룸이 잘 갖춰져 있어 신혼여행객에게 특히 인기가 많습니다."},
+  {region:"짐바란", name:"AYANA 스파 (리버풀 근처)", local:"아야나 리조트 부속 스파, 이동 없이 이용 가능", menu:"발리니즈 마사지, 페이셜 케어, 워터테라피", addr:"AYANA Resort, Jimbaran", rating:"4.9", emoji:"🧖‍♀️", lat:-8.7900, lng:115.1601,
+    desc:"아야나 세가라 투숙 중이면 리조트 내에서 이동 없이 바로 이용할 수 있는 스파예요. 워터테라피 시설까지 함께 즐길 수 있어 마지막날 홀가분하게 힐링하기 좋습니다."},
+  {region:"짐바란", name:"Jimbaran Reflexology & Spa", local:"'리플렉솔로지'는 발반사요법을 뜻하는 영어 표현", menu:"발마사지, 전신마사지, 가성비 좋은 로컬 스파", addr:"Jl. Bukit Permai, Jimbaran", rating:"4.6", emoji:"🦶", lat:-8.7825, lng:115.1699,
+    desc:"짐바란 지역 로컬 스파 중 가성비가 좋기로 소문난 곳이에요. 관광객보다 현지인 이용 비중이 높아 합리적인 가격에 마사지를 받을 수 있습니다."},
+];
+
+const SHOPPING = [
+  {region:"우붓", place:"우붓 아트마켓", items:[
+    {name:"라탄백", price:"약 1.3만원 (15만루피아)", note:"흥정은 부르는 값 30%부터 시작, 3곳 이상 가격비교", emoji:"👜"},
+    {name:"티크우드 식기", price:"약 5천원 (5만루피아)", note:"원형 트레이/그릇 세트, 선물용으로 인기", emoji:"🍽️"},
+    {name:"바틱 원단/의류", price:"협상가", note:"전통문양 원단, 옷·스카프 다양", emoji:"🧵"}
+  ]},
+  {region:"우붓", place:"📍 직접 저장하신 우붓 쇼핑 장소", lat:-8.5087, lng:115.2645, items:[
+    {name:"BALI TEAKY 3 KITCHENWARE", price:"정찰제", note:"우드식기 소품샵 · Jl. Raya Ubud No.4 근처, 티크우드 트레이·도마·그릇", emoji:"🪵", lat:-8.5078473, lng:115.2648555},
+    {name:"Ticket To The Moon Shop - Ubud", price:"한국보다 저렴", note:"업사이클링 해먹 브랜드 가방샵, 미니/플러스 사이즈 선택 가능", emoji:"🎒", lat:-8.5079523, lng:115.2646284},
+    {name:"Coco Supermarket 우붓점", price:"현지가", note:"우붓 인기 슈퍼마켓, 기념품·간식·생필품 한번에", emoji:"🛒", lat:-8.5180189, lng:115.2638369},
+    {name:"아시타바 가방 쇼핑몰", price:"중가", note:"가방·잡화 쇼핑몰", emoji:"👜", lat:-8.5142756, lng:115.2604857},
+    {name:"Ubudahh 쇼핑샵", price:"정찰제", note:"우붓 잡화·소품샵, 정찰제라 흥정 스트레스 없음", emoji:"🛍️", lat:-8.5099471, lng:115.2632502},
+    {name:"Confiture de Bali (쨈)", price:"저렴", note:"발리 수제 과일잼, 선물용으로 인기", emoji:"🍯", lat:-8.508473799999999, lng:115.2642426},
+    {name:"우붓시장 (Jl. Raya Ubud)", price:"흥정가", note:"우붓 전통시장, 라탄·바틱·기념품 흥정 쇼핑", emoji:"🏮", lat:-8.5074148, lng:115.2631068},
+    {name:"Bali & dream 헤어에센스", price:"저렴", note:"헤어에센스 전문샵, 선물용 소포장 많음", emoji:"💧", lat:-8.5094458, lng:115.2622495},
+    {name:"투키스 코코넛 숍 (Tukies Coconut Shop)", price:"아이스크림 1스쿱 4만루피아대", note:"코코넛 아이스크림 전문점, 생코코넛 껍질째 서빙 · 코코넛 버터 등 기념품도 판매", emoji:"🥥", lat:-8.51097, lng:115.26093}
+  ]},
+  {region:"짐바란", place:"짐바란 로컬 마트 & 해산물시장", items:[
+    {name:"티켓투더문 백팩/슬링백", price:"한국보다 저렴", note:"업사이클링 해먹 브랜드, 미니(15L)·플러스(25L) 사이즈 선택", emoji:"🎒"},
+    {name:"루뭇(Lumut) 빨대가방", price:"정찰제", note:"재생플라스틱 소재, 방수라 해변에서 실용적", emoji:"👛"},
+    {name:"말린 해산물/향신료", price:"저렴", note:"짐바란 아침시장에서 파는 현지 식재료, 기념품용", emoji:"🐟"}
+  ]},
+  {region:"우붓/짐바란 공용", place:"현지 마트 (빈탕/그랜드럭키)", items:[
+    {name:"엘립스 헤어에센스", price:"1500원/6알", note:"올리브영보다 절반 이하 가격, 선물용 갓성비", emoji:"💧"},
+    {name:"야바 그래놀라", price:"저렴", note:"조식 대용, 선물용 소포장 많음", emoji:"🥣"},
+    {name:"코피루왁/발리커피", price:"다양", note:"원두/드립백 형태 선물용 추천", emoji:"☕"}
+  ]},
+  {region:"꾸따", place:"Beachwalk 쇼핑센터 (마지막날)", items:[
+    {name:"국제 브랜드 & 로컬 디자이너샵", price:"다양", note:"오픈에어형, 공항 10분 거리라 마지막 쇼핑 최적", emoji:"🏬"},
+    {name:"오가닉 뷰티 브랜드", price:"중가", note:"천연비누, 바디용품 선물세트", emoji:"🧴"},
+    {name:"기념품 & 슈퍼마켓 (지하)", price:"저렴", note:"공항 가기 전 마지막 먹거리 쟁이기 좋음", emoji:"🛒"}
+  ]},
+];
+
+const WEATHER_REF = {
+  "우붓": {lat:-8.5069, lng:115.2625, icon:"⛅", note:"12월은 우기, 오후 소나기 잦음", avgHigh:29, avgLow:22, rain:"60~70%"},
+  "짐바란": {lat:-8.7906, lng:115.1631, icon:"🌤️", note:"해안가라 우붓보단 맑은 날 많음", avgHigh:30, avgLow:24, rain:"45~55%"},
+  "꾸따": {lat:-8.7226, lng:115.1685, icon:"🌤️", note:"공항 인근, 대체로 맑음", avgHigh:31, avgLow:24, rain:"40~50%"},
+};
+
+const HOTELS = {
+  ubud: {name:"카자네 무아 우붓 (KajaNe Mua Ubud)", addr:"Jl. Monkey Forest No.20, Ubud, Kec. Ubud, Kabupaten Gianyar, Bali 80571", phone:"+62 361 972877", web:"https://mua.kajane.com/", lat:-8.5090, lng:115.2617, emoji:"🏡", note:"몽키포레스트 거리 중심, 몽키포레스트·아트마켓 도보 가능"},
+  jimbaran: {name:"아야나 세가라 발리 (AYANA Segara Bali)", addr:"Jl. Karang Mas Sejahtera, Jimbaran, Kec. Kuta Sel., Kabupaten Badung, Bali 80364", phone:"+62 361 702222", web:"https://www.ayana.com", lat:-8.7900, lng:115.1601, emoji:"🏖️", note:"짐바란 절벽 위 리조트, 락바·인피니티풀·해변 이용"}
+};
+// 날짜별로 그날 밤 머무는 숙소 매핑 (12/4~12/6=우붓, 12/7~12/9=짐바란, 12/10=체크아웃 후 공항이동·숙소 없음, 12/3·12/11=이동일)
+const DAY_HOTEL = {d1:null, d2:"ubud", d3:"ubud", d4:"ubud", d5:"jimbaran", d6:"jimbaran", d7:"jimbaran", d8:null, d9:null};
+
+const BOOKING_LINKS = {
+  hotel: [
+    {label:"아고다(Agoda)에서 검색", url:"https://www.agoda.com/search?city=13024"},
+    {label:"부킹닷컴에서 검색", url:"https://www.booking.com/searchresults.html?ss=Bali"},
+  ],
+  tour: [
+    {label:"Klook 지프투어 비교", url:"https://www.klook.com/ko/search-result/?query=Kintamani%20Jeep"},
+    {label:"KKday 지프투어 비교", url:"https://www.kkday.com/ko/search/global?keyword=%ED%82%A8%ED%83%80%EB%A7%88%EB%8B%88%20%EC%A7%80%ED%94%84"},
+  ]
+};
+
+/* ============ STATE (in-memory, no localStorage) ============ */
+const state = {
+  currentView: "itinerary",
+  selectedDay: 0,
+  checkedItems: {},   // dayId -> Set of item index
+  doneDays: new Set(),
+  photos: {},          // dayId -> [ {url} ]
+  weatherRegion: "우붓",
+  liveWeather: null,   // fetched current weather cache {region: data}
+  fxRate: 0.085,       // 1 IDR = 0.085 KRW 기본값
+  expenses: {},        // dayId -> {cash:[{label,amount}], card:[{label,amount}]}
+  memos: {},           // dayId -> string
+  expenseDayIdx: 0,     // 경비탭에서 선택된 날짜
+};
+
+/* 라이트박스 상태 */
+let lb = {photos:[], idx:0};
+function openLightbox(photos, idx){
+  lb.photos = photos; lb.idx = idx;
+  document.getElementById('lightbox').classList.add('show');
+  showLbImg();
+}
+function showLbImg(){
+  document.getElementById('lbImg').src = lb.photos[lb.idx];
+  document.getElementById('lbCounter').textContent = `${lb.idx+1} / ${lb.photos.length}`;
+}
+document.getElementById('lbCloseBtn').addEventListener('click', ()=> document.getElementById('lightbox').classList.remove('show'));
+document.getElementById('lightbox').addEventListener('click', (e)=>{ if(e.target.id==='lightbox') document.getElementById('lightbox').classList.remove('show'); });
+document.getElementById('lbPrevBtn').addEventListener('click', ()=>{ lb.idx = (lb.idx-1+lb.photos.length)%lb.photos.length; showLbImg(); });
+document.getElementById('lbNextBtn').addEventListener('click', ()=>{ lb.idx = (lb.idx+1)%lb.photos.length; showLbImg(); });
+document.addEventListener('keydown', (e)=>{
+  if(!document.getElementById('lightbox').classList.contains('show')) return;
+  if(e.key==='ArrowLeft') document.getElementById('lbPrevBtn').click();
+  if(e.key==='ArrowRight') document.getElementById('lbNextBtn').click();
+  if(e.key==='Escape') document.getElementById('lightbox').classList.remove('show');
+});
+
+/* ============ RENDER: CATEGORY MENU ============ */
+const catDefs = [
+  {key:"checklist", label:"✅ 체크리스트"},
+  {key:"itinerary", label:"🗓️ 일정"},
+  {key:"food", label:"🍽️ 맛집"},
+  {key:"cafe", label:"☕ 카페"},
+  {key:"spa", label:"💆 마사지"},
+  {key:"shopping", label:"🛍️ 쇼핑"},
+  {key:"expense", label:"💰 경비"},
+  {key:"album", label:"📷 여행앨범"},
+];
+function renderCatMenu(){
+  const el = document.getElementById('catMenu');
+  el.innerHTML = catDefs.map(c => `<button class="cat-btn ${state.currentView===c.key?'active':''}" data-view="${c.key}">${c.label}</button>`).join('');
+}
+
+function switchView(view){
+  state.currentView = view;
+  document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
+  document.getElementById('view-'+view).classList.add('active');
+  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.toggle('active', b.dataset.nav===view));
+  renderCatMenu();
+  renderCurrentView();
+  window.scrollTo(0,0);
+}
+
+function renderCurrentView(){
+  document.getElementById('dayBar').style.display = state.currentView==='itinerary' ? '' : 'none';
+  if(state.currentView==='checklist') renderChecklist();
+  if(state.currentView==='itinerary') renderItinerary();
+  if(state.currentView==='food') renderPlaceList('food', FOOD);
+  if(state.currentView==='cafe') renderPlaceList('cafe', CAFE);
+  if(state.currentView==='spa') renderPlaceList('spa', SPA);
+  if(state.currentView==='shopping') renderShopping();
+  if(state.currentView==='expense') renderExpense();
+  if(state.currentView==='album') renderAlbum();
+}
+
+/* Attach coordinates to itinerary items by matching against FOOD/CAFE/SPA name substrings */
+const ALL_PLACES = [...FOOD, ...CAFE, ...SPA];
+function attachCoords(){
+  DAYS.forEach(day=>{
+    if(!day.items) return;
+    day.items.forEach(item=>{
+      if(item.lat) return;
+      const match = ALL_PLACES.find(p => item.name.includes(p.name.split(' ')[0]) || p.name.includes(item.name.split(' ')[0]));
+      if(match){ item.lat = match.lat; item.lng = match.lng; }
+    });
+  });
+  Object.values(SUGGESTED_COURSES).forEach(list=>{
+    list.forEach(item=>{
+      if(item.lat) return;
+      const match = ALL_PLACES.find(p => item.place && p.name.includes(item.place));
+      if(match){ item.lat = match.lat; item.lng = match.lng; }
+    });
+  });
+}
+attachCoords();
+
+/* Ensure every day has an items array (custom additions live here even for empty days) */
+DAYS.forEach(d=>{ if(!d.items) d.items = []; });
+
+/* ============ 메모·전화·저장 (localStorage 불가 환경이면 메모리로 동작) ============ */
+const STORE_OK = (()=>{ try{ localStorage.setItem('_t','1'); localStorage.removeItem('_t'); return true; }catch(e){ return false; } })();
+if(!STORE_OK){
+  const b = document.createElement('div');
+  b.style.cssText = 'background:#fff3cd;color:#7a5b00;padding:10px 14px;font-size:12.5px;line-height:1.5;text-align:center;';
+  b.innerHTML = '⚠️ 이 화면에서는 메모·체크·사진이 <b>저장되지 않아요</b>.<br>파일을 휴대폰에 저장한 뒤 <b>크롬 브라우저</b>로 열어주세요.';
+  document.getElementById('app').insertBefore(b, document.querySelector('.topbar'));
+}
+const DEF_DAYS = JSON.stringify(DAYS.map(d=>d.items));
+let U = {notes:{}, phones:{}};
+try{ U = Object.assign(U, JSON.parse(localStorage.getItem('bali_user_v1')||'{}')); }catch(e){}
+try{ const s = JSON.parse(localStorage.getItem('bali_days_v1')||'null'); if(s) DAYS.forEach((d,i)=>{ if(s[i]) d.items = s[i]; }); }catch(e){}
+function saveU(){ try{ localStorage.setItem('bali_user_v1', JSON.stringify(U)); }catch(e){} }
+function saveDays(){ try{ const c = JSON.stringify(DAYS.map(d=>d.items)); c===DEF_DAYS ? localStorage.removeItem('bali_days_v1') : localStorage.setItem('bali_days_v1', c); }catch(e){} syncMaybePush(); }
+const esc = s => String(s==null?'':s).replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function waNum(p){ let d=(p||'').replace(/[^\d+]/g,''); if(d.startsWith('+')) return d.slice(1); d=d.replace(/\D/g,''); if(d.startsWith('00')) return d.slice(2); if(d.startsWith('0')) return '62'+d.slice(1); return d; }
+function boxVals(box){
+  const [k,a,b] = box.split('|');
+  if(k==='i'){ const it = DAYS.find(d=>d.id===a).items[+b]; return [it.note||'', it.phone||'']; }
+  const hk = a.startsWith('hotel:') ? HOTELS[a.slice(6)] : null;
+  return [U.notes[a]||'', U.phones[a]!==undefined ? U.phones[a] : (hk ? hk.phone : '')];
+}
+function noteBox(box, extra){
+  const [n,p] = boxVals(box), q = waNum(p);
+  return `<div class="nb" data-box="${esc(box)}"><details><summary>📝 메모·전화${n||p?' ●':''}</summary><textarea data-f="note" rows="2" placeholder="메모를 남겨보세요">${esc(n)}</textarea><input data-f="phone" type="tel" placeholder="전화번호 (예: +62 361 123456)" value="${esc(p)}"></details><div class="nbq" ${q?'':'hidden'}><a href="tel:${esc(p.replace(/[^\d+]/g,''))}">📞 ${esc(p)}</a><a href="https://wa.me/${q}" target="_blank">💬 WhatsApp</a>${extra||''}</div></div>`;
+}
+function hotelBox(key){ const h=HOTELS[key]; return `<div style="font-size:11px;color:#8a8272;margin:4px 2px 0;">📍 ${h.addr}</div>` + noteBox('u|hotel:'+key, `<a href="${h.web}" target="_blank">🌐 웹사이트</a>`); }
+document.addEventListener('input', e=>{
+  const t=e.target, f=t.dataset && t.dataset.f; if(!f) return;
+  const c=t.closest('.nb'), box=c.dataset.box, [k,a,b]=box.split('|');
+  if(k==='i'){ DAYS.find(d=>d.id===a).items[+b][f]=t.value; saveDays(); }
+  else { U[f==='note'?'notes':'phones'][a]=t.value; saveU(); }
+  if(f==='phone'){ const q=c.querySelector('.nbq'), n=waNum(t.value), l=q.querySelectorAll('a'); q.hidden=!n; l[0].href='tel:'+t.value.replace(/[^\d+]/g,''); l[0].textContent='📞 '+t.value; l[1].href='https://wa.me/'+n; }
+});
+
+/* ============ 일정 공유 (Supabase, 방 코드 방식) ============ */
+var SYNC = {cfg:null, ts:0, lastJson:null, t:null};
+function syncCfgSave(){ try{ SYNC.cfg ? localStorage.setItem('bali_sync_v1', JSON.stringify(SYNC.cfg)) : localStorage.removeItem('bali_sync_v1'); }catch(e){} }
+function syncChip(s){ const c=document.getElementById('syncChip'); if(c) c.textContent = ({off:'🔄 일정 공유 설정', ok:'🔄 일정 공유 중', err:'⚠️ 공유 연결 실패'})[s]; }
+function syncRpc(fn, body){
+  const c = SYNC.cfg;
+  return fetch(c.url+'/rest/v1/rpc/'+fn, {method:'POST', headers:{'Content-Type':'application/json', apikey:c.key, Authorization:'Bearer '+c.key}, body:JSON.stringify(body)}).then(r=>r.ok ? r.json() : Promise.reject(r.status));
+}
+const syncNow = ()=>JSON.stringify(DAYS.map(d=>d.items));
+function syncMaybePush(){
+  if(!SYNC.cfg || syncNow()===SYNC.lastJson) return;
+  clearTimeout(SYNC.t); SYNC.t = setTimeout(syncPush, 1500);
+}
+async function syncPush(){
+  const cur = syncNow(), days = {}; DAYS.forEach(d=>days[d.id]=d.items);
+  const doc = {ts:Date.now(), days};
+  try{ await syncRpc('save_trip', {p_code:SYNC.cfg.code, p_data:doc}); SYNC.lastJson = cur; SYNC.ts = doc.ts; try{localStorage.setItem('bali_sync_ts', doc.ts);}catch(e){} syncChip('ok'); }catch(e){ syncChip('err'); }
+}
+async function syncPull(){
+  if(!SYNC.cfg) return;
+  try{
+    const doc = await syncRpc('get_trip', {p_code:SYNC.cfg.code}); syncChip('ok');
+    if(!doc){ if(syncNow()!==DEF_DAYS) syncPush(); return; }
+    if(doc.ts > (SYNC.ts||0)){
+      const ae = document.activeElement; if(ae && /TEXTAREA|INPUT/.test(ae.tagName)) return;
+      DAYS.forEach(d=>{ if(doc.days[d.id]) d.items = doc.days[d.id]; });
+      SYNC.ts = doc.ts; SYNC.lastJson = syncNow(); try{localStorage.setItem('bali_sync_ts', doc.ts);}catch(e){}
+      state.currentView==='itinerary' ? renderItinerary() : saveDays();
+    }
+  }catch(e){ syncChip('err'); }
+}
+function syncMenu(){
+  if(!SYNC.cfg){
+    const url = prompt('Supabase Project URL (예: https://xxxx.supabase.co)'); if(!url) return;
+    const key = prompt('anon public key'); if(!key) return;
+    const code = prompt('방 코드 (10자 이상, 두 분만 아는 문자열)'); if(!code || code.trim().length<10){ alert('방 코드는 10자 이상이어야 해요'); return; }
+    SYNC.cfg = {url:url.trim().replace(/\/$/,''), key:key.trim(), code:code.trim()}; syncCfgSave(); SYNC.lastJson = syncNow(); syncPull();
+    alert('일정 공유를 켰어요. 칩을 다시 눌러 남편 폰용 링크를 만들 수 있어요.'); return;
+  }
+  const v = prompt('1: 상대방 폰용 링크 만들기\n2: 기본 일정으로 되돌리기(공유된 일정도 덮어씀)\n3: 공유 끄기','1');
+  if(v==='1'){ const c=SYNC.cfg, b=btoa([c.url,c.key,c.code].map(encodeURIComponent).join('|')); prompt('이 링크를 상대방에게 보내세요 (복사해서 전달)', location.origin+location.pathname+'#s='+b); }
+  if(v==='2' && confirm('일정을 처음 상태로 되돌리고 공유할까요?')){ JSON.parse(DEF_DAYS).forEach((it,i)=>DAYS[i].items=it); renderItinerary(); }
+  if(v==='3'){ SYNC.cfg=null; syncCfgSave(); syncChip('off'); }
+}
+(function syncInit(){
+  try{ const m=location.hash.match(/^#s=(.+)$/); if(m){ const [u,k,c]=atob(m[1]).split('|').map(decodeURIComponent); SYNC.cfg={url:u,key:k,code:c}; syncCfgSave(); } else SYNC.cfg=JSON.parse(localStorage.getItem('bali_sync_v1')||'null'); SYNC.ts=+(localStorage.getItem('bali_sync_ts')||0); }catch(e){}
+  document.getElementById('syncChip').onclick = syncMenu;
+  SYNC.lastJson = syncNow();
+  if(SYNC.cfg){ syncChip('ok'); syncPull(); setInterval(()=>{ if(!document.hidden) syncPull(); }, 20000); document.addEventListener('visibilitychange', ()=>{ if(!document.hidden) syncPull(); }); }
+})();
+
+/* ============ 출발 전 체크리스트 ============ */
+const CHECKLIST = [
+  {g:"📄 서류·결제", items:["여권 (유효기간 확인)","인도네시아 비자(도착비자/e-VOA) 확인","입국 전 전자세관신고 확인","관광세(Love Bali) 확인","대한항공 e-티켓 (12/3 16:20 KE431)","귀국편 e-티켓 (12/11 01:20)","숙소 예약 바우처 (카자네 무아 · 아야나 세가라)","해외결제 카드 · 현금 환전","여행자보험"]},
+  {g:"📌 예약·확인", items:["지프투어 업체 예약 (12/4 새벽 픽업)","Uma Dawa 12/6 11:30 확인","산타이라운지 이용권 예약 (12/10 17~18시)","공항 ↔ 숙소 이동 차량 확인","온라인 체크인 · 좌석 확인"]},
+  {g:"🔌 전자기기", items:["멀티 어댑터 (C/F형)","보조배터리 (기내 휴대)","충전기 · 케이블","eSIM · 로밍 설정","WhatsApp 설치 · 로그인","오프라인 지도 다운로드"]},
+  {g:"🧴 생활용품", items:["상비약 · 멀미약","선크림 · 모기기피제","수영복 · 비치웨어","우산 · 우비 (12월 우기)","편한 샌들 · 운동화"]},
+  {g:"🏠 출발 당일 (12/3)", items:["집 10:00 출발","가스 · 전기 · 문단속"]}
+];
+function renderChecklist(){
+  const el = document.getElementById('view-checklist');
+  U.chk = U.chk || {}; U.chkX = U.chkX || [];
+  const groups = [...CHECKLIST, ...(U.chkX.length ? [{g:"✏️ 직접 추가", items:U.chkX, x:true}] : [])];
+  let tot=0, done=0;
+  const body = groups.map(g=>`<div style="margin-bottom:18px;"><p style="font-size:14.5px;font-weight:800;color:var(--leaf-deep);margin-bottom:8px;">${g.g}</p>${g.items.map((t,i)=>{
+    const k=g.g+'|'+t, c=!!U.chk[k]; tot++; if(c) done++;
+    return `<label class="shop-item" style="cursor:pointer;align-items:center;gap:10px;"><input type="checkbox" data-ck="${esc(k)}" ${c?'checked':''} style="width:20px;height:20px;accent-color:var(--leaf-deep);flex:0 0 auto;"><div style="flex:1;font-size:13.5px;${c?'text-decoration:line-through;color:#a59e8c;':''}">${esc(t)}</div>${g.x?`<span data-ckdel="${i}" style="color:#c1653a;cursor:pointer;padding:4px;">✕</span>`:''}</label>`;
+  }).join('')}</div>`).join('');
+  const pct = tot ? Math.round(done/tot*100) : 0;
+  el.innerHTML = `<p class="section-title">✅ 출발 전 체크리스트</p>
+    <div class="place-card" style="padding:12px 14px;margin-bottom:16px;"><div style="font-size:13px;font-weight:800;">${done} / ${tot} 완료 (${pct}%)</div><div style="height:8px;background:var(--paper-2);border-radius:6px;margin-top:8px;overflow:hidden;"><div style="height:100%;width:${pct}%;background:var(--leaf-deep);"></div></div></div>
+    ${body}
+    <div style="display:flex;gap:8px;"><input id="ckNew" type="text" placeholder="항목 직접 추가" style="flex:1;padding:9px 10px;border:1px solid var(--line);border-radius:8px;font-size:12.5px;"><button id="ckAdd" style="background:var(--terracotta);color:#fff;border:none;padding:0 16px;border-radius:8px;font-size:12.5px;font-weight:700;cursor:pointer;">추가</button></div>`;
+}
+document.addEventListener('change', e=>{
+  const k = e.target.dataset && e.target.dataset.ck; if(k===undefined) return;
+  U.chk[k] = e.target.checked; saveU(); renderChecklist();
+});
+document.addEventListener('click', e=>{
+  const t = e.target;
+  if(t.dataset && t.dataset.ckdel!==undefined){ e.preventDefault(); U.chkX.splice(+t.dataset.ckdel,1); saveU(); renderChecklist(); }
+  if(t.id==='ckAdd'){ const i=document.getElementById('ckNew'), v=i.value.trim(); if(v){ U.chkX.push(v); saveU(); renderChecklist(); } }
+});
+
+/* ============ ITINERARY VIEW ============ */
+function renderItinerary(){
+  saveDays();
+  const el = document.getElementById('view-itinerary');
+  const day = DAYS[state.selectedDay];
+  const checked = state.checkedItems[day.id] || new Set();
+
+  const wRegionKey = ["우붓","짐바란","꾸따"].find(r=>day.region.includes(r)) || "우붓";
+  const w = WEATHER_REF[wRegionKey];
+
+  const hotelKey = DAY_HOTEL[day.id];
+  const hotel = hotelKey ? HOTELS[hotelKey] : null;
+
+  // build google maps multi-stop directions URL: 숙소(출발점) -> 오늘 일정들 -> 숙소(도착점)
+  const stopsWithCoords = day.items.filter(it=>it.lat && it.lng);
+  let mapUrl = null;
+  let fullRoute = stopsWithCoords;
+  if(hotel){
+    fullRoute = [{lat:hotel.lat,lng:hotel.lng}, ...stopsWithCoords, {lat:hotel.lat,lng:hotel.lng}];
+  }
+  if(fullRoute.length >= 2){
+    const origin = fullRoute[0];
+    const dest = fullRoute[fullRoute.length-1];
+    const waypoints = fullRoute.slice(1,-1).map(s=>`${s.lat},${s.lng}`).join('|');
+    mapUrl = `https://www.google.com/maps/dir/?api=1&origin=${origin.lat},${origin.lng}&destination=${dest.lat},${dest.lng}` + (waypoints ? `&waypoints=${encodeURIComponent(waypoints)}` : '') + `&travelmode=driving`;
+  } else if(stopsWithCoords.length === 1){
+    mapUrl = `https://www.google.com/maps/dir/?api=1&destination=${stopsWithCoords[0].lat},${stopsWithCoords[0].lng}&travelmode=driving`;
+  }
+
+  const hasAnyItems = day.items.length > 0;
+  const suggestions = SUGGESTED_COURSES[day.id] || [];
+
+  el.innerHTML = `
+    <p class="section-title">🗓️ 일정별 코스</p>
+
+    <div class="weather-card" id="weatherCard">
+      <div class="weather-left">
+        <div class="weather-icon" id="wIcon">${w.icon}</div>
+        <div>
+          <div class="weather-temp" id="wTemp">불러오는 중...</div>
+          <div class="weather-region" id="wDesc">${wRegionKey} 실시간 날씨 조회 중</div>
+        </div>
+      </div>
+      <div class="weather-right">
+        <span id="wUpdated">${w.note}</span><br>
+        <select class="weather-select" id="weatherRegionSelect">
+          ${Object.keys(WEATHER_REF).map(r=>`<option value="${r}" ${r===wRegionKey?'selected':''}>${r} 날씨 보기</option>`).join('')}
+        </select>
+      </div>
+    </div>
+
+    ${hotel ? `
+    <a href="https://www.google.com/maps/search/?api=1&query=${hotel.lat},${hotel.lng}" target="_blank" style="text-decoration:none;">
+      <div class="place-card" style="padding:12px 14px;display:flex;gap:10px;align-items:center;border-color:var(--gold);">
+        <div style="font-size:24px;">${hotel.emoji}</div>
+        <div style="flex:1;">
+          <div style="font-size:13px;font-weight:800;color:var(--ink);">오늘 숙소 · ${hotel.name}</div>
+          <div style="font-size:11px;color:#8a8272;margin-top:2px;">${hotel.note}</div>
+        </div>
+        <div style="font-size:13px;color:var(--leaf-deep);font-weight:700;">지도 ›</div>
+      </div>
+    </a>${hotelBox(hotelKey)}` : ''}
+
+    <div class="day-header" style="margin-top:12px;">
+      <div class="day-header-region">${day.region}</div>
+      <div class="day-header-title">${day.date} · ${day.title}</div>
+    </div>
+    <div class="timeline">
+      ${mapUrl ? `<a class="day-map-btn" href="${mapUrl}" target="_blank">🗺️ ${hotel ? '숙소 출발 → 오늘 동선 → 숙소 복귀' : '오늘 동선 전체'} 길찾기</a>` : ''}
+      ${!hasAnyItems ? `<div class="empty-state" style="padding:20px 4px;">아직 이 날 일정이 비어있어요.<br>아래 추천 코스에서 골라 추가하거나, 직접 일정을 추가해보세요.</div>` : ''}
+      ${day.items.map((item, idx)=>`
+        <div class="t-item">
+          <div class="t-time">${item.time}</div>
+          <div class="t-content">
+            <div class="t-name">${item.emoji} ${item.name}${item.isPlaceholder ? ' <span style="font-size:10px;color:var(--terracotta);font-weight:700;">(예약 확정시 수정)</span>' : ''}</div>
+            <div class="t-blurb">${item.blurb}</div>
+            ${item.slotType==='tour' ? `<div style="margin-top:6px;display:flex;gap:6px;">${BOOKING_LINKS.tour.map(l=>`<a href="${l.url}" target="_blank" style="font-size:10.5px;background:var(--paper-2);color:var(--leaf-deep);padding:4px 9px;border-radius:12px;text-decoration:none;font-weight:700;">${l.label} ↗</a>`).join('')}</div>` : ''}
+            ${item.name.includes('체크인') ? `<div style="margin-top:6px;display:flex;gap:6px;">${BOOKING_LINKS.hotel.map(l=>`<a href="${l.url}" target="_blank" style="font-size:10.5px;background:var(--paper-2);color:var(--leaf-deep);padding:4px 9px;border-radius:12px;text-decoration:none;font-weight:700;">${l.label} ↗</a>`).join('')}</div>` : ''}
+            ${item.url ? `<div style="margin-top:6px;display:flex;gap:6px;"><a href="${item.url}" target="_blank" style="font-size:10.5px;background:var(--paper-2);color:var(--leaf-deep);padding:4px 9px;border-radius:12px;text-decoration:none;font-weight:700;">${item.urlLabel||'예약 링크'} ↗</a></div>` : ''}
+            ${noteBox('i|'+day.id+'|'+idx)}
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px;align-items:center;">
+            <div class="t-check ${checked.has(idx)?'checked':''}" data-day="${day.id}" data-idx="${idx}">✓</div>
+            ${item.lat ? `<a href="https://www.google.com/maps/dir/?api=1&destination=${item.lat},${item.lng}&travelmode=driving" target="_blank" style="font-size:15px;text-decoration:none;" title="길찾기">🧭</a>` : ''}
+            ${true ? `<span class="edit-item" data-day="${day.id}" data-idx="${idx}" style="font-size:13px;cursor:pointer;" title="수정">✏️</span>` : ''}
+            <span class="del-item" data-day="${day.id}" data-idx="${idx}" style="font-size:13px;color:#c1653a;cursor:pointer;" title="삭제">✕</span>
+          </div>
+        </div>
+      `).join('')}
+      <button class="complete-btn ${state.doneDays.has(day.id)?'done':''}" id="completeBtn" style="margin-top:${hasAnyItems?'4px':'14px'};">
+        ${state.doneDays.has(day.id) ? '✓ 이 날 일정 완료됨' : '이 날 일정 완료로 표시'}
+      </button>
+    </div>
+
+    ${suggestions.length ? `
+    <div style="margin-top:18px;">
+      <p class="section-title" style="font-size:15px;">✨ 추천 코스</p>
+      <p class="section-desc" style="margin-top:-8px;">숙소 위치 기준으로 골라봤어요. 마음에 드는 항목만 추가하세요</p>
+      ${suggestions.map((s,i)=>`
+        <div class="place-card" style="padding:12px 14px;display:flex;gap:10px;align-items:center;">
+          <div style="font-size:22px;flex:0 0 auto;">${s.emoji}</div>
+          <div style="flex:1;">
+            <div style="font-size:13.5px;font-weight:700;">${s.time} · ${s.name}</div>
+            <div style="font-size:11.5px;color:#8a8272;margin-top:2px;">${s.blurb}</div>
+          </div>
+          <button class="add-suggestion-btn" data-day="${day.id}" data-sidx="${i}" style="flex:0 0 auto;background:var(--leaf-deep);color:#fff;border:none;padding:7px 12px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;">+ 추가</button>
+        </div>
+      `).join('')}
+    </div>` : ''}
+
+    <div style="margin-top:16px;">
+      <p class="section-title" style="font-size:15px;">🔍 구글맵에서 장소 검색해 추가</p>
+      <p class="section-desc" style="margin-top:-8px;">가고 싶은 곳을 검색해서 이름을 확인한 뒤, 아래 폼에 그대로 붙여넣어 추가하세요</p>
+      <div class="place-card" style="padding:12px 14px;">
+        <div style="display:flex;gap:8px;">
+          <input id="gmapSearchInput" type="text" placeholder="예: 우붓 초콜릿 팩토리" style="flex:1;padding:9px 10px;border:1px solid var(--line);border-radius:8px;font-size:12.5px;">
+          <button id="gmapSearchBtn" style="flex:0 0 auto;background:var(--leaf-deep);color:#fff;border:none;padding:0 14px;border-radius:8px;font-size:12.5px;font-weight:700;cursor:pointer;">🗺️ 검색</button>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:16px;">
+      <p class="section-title" style="font-size:15px;">➕ 직접 일정 추가</p>
+      <div class="place-card" style="padding:14px;">
+        <div style="display:flex;gap:8px;margin-bottom:8px;">
+          <input id="customTime" type="text" placeholder="시간 (예: 14:00)" style="flex:0 0 110px;padding:9px 10px;border:1px solid var(--line);border-radius:8px;font-size:12.5px;">
+          <input id="customName" type="text" placeholder="일정 이름 (장소명)" style="flex:1;padding:9px 10px;border:1px solid var(--line);border-radius:8px;font-size:12.5px;">
+        </div>
+        <textarea id="customBlurb" placeholder="설명 (선택)" style="width:100%;padding:9px 10px;border:1px solid var(--line);border-radius:8px;font-size:12.5px;resize:none;height:44px;box-sizing:border-box;margin-bottom:8px;"></textarea>
+        <div style="font-size:11px;color:#8a8272;margin-bottom:6px;">💡 위 구글맵 검색으로 정확한 위치를 찾았다면 좌표를 자동으로 연결할게요. 검색 없이 추가해도 이름 기준으로 나중에 지도 연결이 가능해요.</div>
+        <button id="addCustomBtn" style="width:100%;padding:11px;background:var(--terracotta);color:#fff;border:none;border-radius:9px;font-size:13px;font-weight:700;cursor:pointer;">이 일정에 추가하기</button>
+      </div>
+    </div>
+  `;
+
+  document.getElementById('dayBar').innerHTML = '<div class="day-selector" id="daySelector"></div>';
+  const sel = document.getElementById('daySelector');
+  sel.innerHTML = DAYS.map((d,i)=>`
+    <div class="day-pill ${i===state.selectedDay?'active':''} ${state.doneDays.has(d.id)?'done':''}" data-idx="${i}">
+      <span>${d.region.slice(0,2)}</span>
+      <span class="d-date">${d.date.split('/')[1]}일</span>
+    </div>
+  `).join('');
+  sel.querySelectorAll('.day-pill').forEach(p=>{
+    p.addEventListener('click', ()=>{ state.selectedDay = +p.dataset.idx; renderItinerary(); });
+  });
+
+  el.querySelectorAll('.t-check').forEach(c=>{
+    c.addEventListener('click', ()=>{
+      const dId = c.dataset.day, idx = +c.dataset.idx;
+      if(!state.checkedItems[dId]) state.checkedItems[dId] = new Set();
+      const s = state.checkedItems[dId];
+      s.has(idx) ? s.delete(idx) : s.add(idx);
+      renderItinerary();
+    });
+  });
+
+  const completeBtnEl = document.getElementById('completeBtn');
+  if(completeBtnEl){
+    completeBtnEl.addEventListener('click', ()=>{
+      state.doneDays.has(day.id) ? state.doneDays.delete(day.id) : state.doneDays.add(day.id);
+      renderItinerary();
+    });
+  }
+
+  el.querySelectorAll('.del-item').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const dId = btn.dataset.day, idx = +btn.dataset.idx;
+      const d = DAYS.find(x=>x.id===dId);
+      d.items.splice(idx,1);
+      renderItinerary();
+    });
+  });
+
+  el.querySelectorAll('.edit-item').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const dId = btn.dataset.day, idx = +btn.dataset.idx;
+      const d = DAYS.find(x=>x.id===dId);
+      const item = d.items[idx];
+      const newTime = prompt('시간 수정', item.time);
+      if(newTime===null) return;
+      const newName = prompt('일정 이름 수정', item.name);
+      if(newName===null) return;
+      const newBlurb = prompt('설명 수정', item.blurb);
+      if(newBlurb===null) return;
+      item.time = newTime;
+      item.name = newName || item.name;
+      item.blurb = newBlurb;
+      item.isPlaceholder = false;
+      renderItinerary();
+    });
+  });
+
+  el.querySelectorAll('.add-suggestion-btn').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const dId = btn.dataset.day, sidx = +btn.dataset.sidx;
+      const d = DAYS.find(x=>x.id===dId);
+      const suggestion = (SUGGESTED_COURSES[dId]||[])[sidx];
+      if(suggestion){
+        d.items.push({...suggestion});
+        d.items.sort((a,b)=> (a.time||'').localeCompare(b.time||''));
+      }
+      renderItinerary();
+    });
+  });
+
+  const addCustomBtnEl = document.getElementById('addCustomBtn');
+  if(addCustomBtnEl){
+    addCustomBtnEl.addEventListener('click', ()=>{
+      const t = document.getElementById('customTime').value.trim();
+      const n = document.getElementById('customName').value.trim();
+      const b = document.getElementById('customBlurb').value.trim();
+      if(!n){ alert('일정 이름을 입력해주세요'); return; }
+      const newItem = {time: t || '시간미정', name:n, blurb: b || '직접 추가한 일정', emoji:'📌'};
+      // 이름이 기존 맛집/카페/스파 DB와 매칭되면 좌표 자동 연결 (길찾기 버튼 활성화)
+      const match = ALL_PLACES.find(p => n.includes(p.name.split(' ')[0]) || p.name.includes(n));
+      if(match){ newItem.lat = match.lat; newItem.lng = match.lng; }
+      day.items.push(newItem);
+      day.items.sort((a,b2)=> (a.time||'').localeCompare(b2.time||''));
+      document.getElementById('customTime').value='';
+      document.getElementById('customName').value='';
+      document.getElementById('customBlurb').value='';
+      renderItinerary();
+    });
+  }
+
+  const gmapSearchBtnEl = document.getElementById('gmapSearchBtn');
+  if(gmapSearchBtnEl){
+    gmapSearchBtnEl.addEventListener('click', ()=>{
+      const q = document.getElementById('gmapSearchInput').value.trim();
+      if(!q){ alert('검색할 장소명을 입력해주세요'); return; }
+      window.open(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q + ' Bali')}`, '_blank');
+      const nameInput = document.getElementById('customName');
+      if(nameInput && !nameInput.value) nameInput.value = q;
+    });
+    document.getElementById('gmapSearchInput').addEventListener('keydown', (e)=>{
+      if(e.key==='Enter'){ e.preventDefault(); gmapSearchBtnEl.click(); }
+    });
+  }
+
+  loadLiveWeather(wRegionKey);
+  document.getElementById('weatherRegionSelect').addEventListener('change', (e)=>{
+    loadLiveWeather(e.target.value);
+  });
+}
+
+/* 실시간 날씨 (Open-Meteo, 무료·API키 불필요) */
+const WMO_ICON = (code)=>{
+  if(code===0) return '☀️';
+  if(code<=3) return '⛅';
+  if(code<=48) return '🌫️';
+  if(code<=57) return '🌦️';
+  if(code<=67) return '🌧️';
+  if(code<=77) return '🌨️';
+  if(code<=82) return '🌧️';
+  if(code<=86) return '🌨️';
+  if(code>=95) return '⛈️';
+  return '🌤️';
+};
+const WMO_TEXT = (code)=>{
+  if(code===0) return '맑음';
+  if(code<=3) return '구름 조금';
+  if(code<=48) return '안개';
+  if(code<=57) return '이슬비';
+  if(code<=67) return '비';
+  if(code<=77) return '눈';
+  if(code<=82) return '소나기';
+  if(code<=86) return '소낙눈';
+  if(code>=95) return '뇌우';
+  return '흐림';
+};
+async function loadLiveWeather(region){
+  const ref = WEATHER_REF[region];
+  if(!ref) return;
+  const iconEl = document.getElementById('wIcon');
+  const tempEl = document.getElementById('wTemp');
+  const descEl = document.getElementById('wDesc');
+  const updEl = document.getElementById('wUpdated');
+  if(!tempEl) return;
+  tempEl.textContent = '불러오는 중...';
+  descEl.textContent = `${region} 실시간 날씨 조회 중`;
+  try{
+    const url = `https://api.open-meteo.com/v1/forecast?latitude=${ref.lat}&longitude=${ref.lng}&current=temperature_2m,weather_code,relative_humidity_2m&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=Asia%2FSingapore&forecast_days=1`;
+    const res = await fetch(url);
+    const data = await res.json();
+    const cur = data.current;
+    const daily = data.daily;
+    const icon = WMO_ICON(cur.weather_code);
+    const text = WMO_TEXT(cur.weather_code);
+    iconEl.textContent = icon;
+    tempEl.textContent = `${Math.round(cur.temperature_2m)}°C`;
+    descEl.textContent = `${region} 지금 ${text} · 습도 ${cur.relative_humidity_2m}%`;
+    updEl.innerHTML = `오늘 최고 ${Math.round(daily.temperature_2m_max[0])}° / 최저 ${Math.round(daily.temperature_2m_min[0])}° · 강수확률 ${daily.precipitation_probability_max[0]}%`;
+  }catch(err){
+    tempEl.textContent = `${ref.avgHigh}° / ${ref.avgLow}°`;
+    descEl.textContent = `${region} · 12월 평균 (실시간 조회는 파일/브라우저로 열 때만 가능)`;
+    updEl.textContent = ref.note;
+  }
+}
+
+/* ============ PLACE LIST VIEW (food/cafe/spa) ============ */
+function renderPlaceList(view, data){
+  const el = document.getElementById('view-'+view);
+  const regions = ["전체", ...new Set(data.map(d=>d.region))];
+  const activeRegion = el.dataset.region || "전체";
+  const titleMap = {food:"🍽️ 맛집", cafe:"☕ 카페", spa:"💆 마사지샵"};
+  const filtered = activeRegion === "전체" ? data : data.filter(d=>d.region===activeRegion);
+
+  el.innerHTML = `
+    <p class="section-title">${titleMap[view]}</p>
+    <p class="section-desc">지역별로 골라 구글맵에서 위치와 사진을 바로 확인하세요</p>
+    <div class="region-tabs">
+      ${regions.map(r=>`<div class="region-tab ${r===activeRegion?'active':''}" data-region="${r}">${r}</div>`).join('')}
+    </div>
+    ${filtered.map((p,i)=>`
+      <div class="place-card">
+        <div class="place-photo">
+          <span class="place-tag">${p.region}</span>
+          ${p.emoji}
+        </div>
+        <div class="place-body">
+          <div class="place-name">${p.name} ${p.rating ? `<span class="rating-badge">★${p.rating}</span>` : ''}</div>
+          ${p.local ? `<div class="local-tag">💬 ${p.local}</div>` : ''}
+          <div class="place-menu" style="margin-top:6px;">${p.menu}</div>
+          <div class="place-addr">📍 ${p.addr}</div>
+          <div class="place-actions">
+            <a class="map-btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=${p.lat},${p.lng}">🗺️ 지도</a>
+            <a class="goto-btn" target="_blank" href="https://www.google.com/maps/dir/?api=1&destination=${p.lat},${p.lng}&travelmode=driving">🧭 길찾기</a>
+            <button class="info-btn" data-view="${view}" data-idx="${data.indexOf(p)}">ℹ️</button>
+          </div>
+          ${noteBox('u|'+view+':'+p.name)}
+        </div>
+      </div>
+    `).join('')}
+  `;
+  el.querySelectorAll('.region-tab').forEach(t=>{
+    t.addEventListener('click', ()=>{ el.dataset.region = t.dataset.region; renderPlaceList(view, data); });
+  });
+  el.querySelectorAll('.info-btn').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const d = btn.dataset.view==='food'?FOOD : btn.dataset.view==='cafe'?CAFE : SPA;
+      openPlaceModal(d[+btn.dataset.idx]);
+    });
+  });
+}
+
+/* ============ PLACE DETAIL MODAL ============ */
+function openPlaceModal(p){
+  let overlay = document.getElementById('placeModalOverlay');
+  if(!overlay){
+    overlay = document.createElement('div');
+    overlay.className = 'modal-overlay';
+    overlay.id = 'placeModalOverlay';
+    document.body.appendChild(overlay);
+  }
+  overlay.innerHTML = `
+    <div class="modal-sheet">
+      <div class="modal-handle"></div>
+      <div class="modal-header">
+        <div>
+          <div class="modal-title">${p.emoji} ${p.name}</div>
+        </div>
+        <button class="modal-close" id="modalCloseBtn">✕</button>
+      </div>
+      ${p.local ? `<div class="modal-local">💬 ${p.local}</div>` : ''}
+      <div class="modal-photo">${p.emoji}</div>
+      <div class="modal-row">
+        <div class="modal-row-label">지역</div>
+        <div class="modal-row-value">${p.region}${p.rating ? ' · ★'+p.rating : ''}</div>
+      </div>
+      <div class="modal-row">
+        <div class="modal-row-label">대표메뉴</div>
+        <div class="modal-row-value">${p.menu}</div>
+      </div>
+      <div class="modal-row">
+        <div class="modal-row-label">주소</div>
+        <div class="modal-row-value">${p.addr}</div>
+      </div>
+      ${p.desc ? `<div class="modal-desc">${p.desc}</div>` : ''}
+      <div class="modal-actions">
+        <a class="modal-btn-map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=${p.lat},${p.lng}">🗺️ 지도로 보기</a>
+        <a class="modal-btn-go" target="_blank" href="https://www.google.com/maps/dir/?api=1&destination=${p.lat},${p.lng}&travelmode=driving">🧭 길찾기</a>
+      </div>
+    </div>
+  `;
+  overlay.classList.add('open');
+  overlay.querySelector('#modalCloseBtn').addEventListener('click', ()=> overlay.classList.remove('open'));
+  overlay.addEventListener('click', (e)=>{ if(e.target===overlay) overlay.classList.remove('open'); });
+}
+
+/* ============ SHOPPING VIEW ============ */
+function renderShopping(){
+  const el = document.getElementById('view-shopping');
+  el.innerHTML = `
+    <p class="section-title">🛍️ 지역별 쇼핑 추천</p>
+    <p class="section-desc">가성비 기념품 위주로 정리했어요. 시장은 흥정, 몰/마트는 정찰제입니다</p>
+    ${SHOPPING.map(g=>`
+      <div style="margin-bottom:20px;">
+        <p style="font-size:14.5px;font-weight:800;color:var(--leaf-deep);margin-bottom:8px;">📍 ${g.region} · ${g.place}</p>
+        ${g.items.map(it=>`
+          <div class="shop-item">
+            <div class="shop-emoji">${it.emoji}</div>
+            <div style="flex:1;">
+              <div class="shop-name">${it.name}</div>
+              <div class="shop-price">${it.price}</div>
+              <div class="shop-note">${it.note}</div>
+              ${noteBox('u|shop:'+it.name)}
+            </div>
+            ${it.lat ? `<a href="https://www.google.com/maps/dir/?api=1&destination=${it.lat},${it.lng}&travelmode=driving" target="_blank" style="flex:0 0 auto;font-size:16px;text-decoration:none;" title="길찾기">🧭</a>` : ''}
+          </div>
+        `).join('')}
+      </div>
+    `).join('')}
+  `;
+}
+
+/* ============ ALBUM VIEW ============ */
+/* ============ EXPENSE VIEW (환율+세금 계산기, 경비 트래커) ============ */
+const TAX_PRESETS = [
+  {label:"PPN 11%", pct:11}, {label:"서비스 10%", pct:10}, {label:"PPN+서비스 21%", pct:21},
+  {label:"레스토랑 15%", pct:15}, {label:"호텔세 20%", pct:20}
+];
+let taxState = {amt:0, pct:11, curr:"KRW"};
+
+function fmtKRW(n){ return '₩'+Math.round(n).toLocaleString('ko-KR'); }
+function fmtIDR(n){ return 'Rp '+Math.round(n).toLocaleString('id-ID'); }
+
+function getExpenseTotals(){
+  let cash=0, card=0;
+  Object.values(state.expenses).forEach(day=>{
+    (day.cash||[]).forEach(e=>cash+=e.amount);
+    (day.card||[]).forEach(e=>card+=e.amount);
+  });
+  return {cash, card, total:cash+card};
+}
+
+function renderExpense(){
+  const el = document.getElementById('view-expense');
+  const totals = getExpenseTotals();
+  const dayIdx = state.expenseDayIdx;
+  const day = DAYS[dayIdx];
+  if(!state.expenses[day.id]) state.expenses[day.id] = {cash:[], card:[]};
+  const dayExp = state.expenses[day.id];
+  const dayCash = dayExp.cash.reduce((s,e)=>s+e.amount,0);
+  const dayCard = dayExp.card.reduce((s,e)=>s+e.amount,0);
+
+  el.innerHTML = `
+    <p class="section-title">💰 경비 · 환율 계산기</p>
+
+    <div class="sticky-total">
+      <div class="sticky-item"><div class="sticky-lbl">💵 현금 누계</div><div class="sticky-val">${fmtKRW(totals.cash)}</div></div>
+      <div class="sticky-item"><div class="sticky-lbl">💳 카드 누계</div><div class="sticky-val">${fmtKRW(totals.card)}</div></div>
+      <div class="sticky-item"><div class="sticky-lbl">✦ 총 경비</div><div class="sticky-val" style="color:var(--gold);">${fmtKRW(totals.total)}</div></div>
+    </div>
+
+    <div class="fx-card">
+      <div class="fx-head">
+        <div class="fx-title">💱 환율 계산기</div>
+        <div class="fx-rate-row">1 IDR = <input class="fx-rate-in" id="fxRateIn" type="number" step="0.001" value="${state.fxRate}"> KRW</div>
+      </div>
+      <div class="fx-body">
+        <div>
+          <div class="fx-col-lbl">🇰🇷 원화 (KRW)</div>
+          <input class="fx-in" id="krwIn" type="number" placeholder="0">
+        </div>
+        <button class="fx-swap-btn" id="fxSwapBtn">⇄</button>
+        <div>
+          <div class="fx-col-lbl">🇮🇩 루피아 (IDR)</div>
+          <input class="fx-in" id="idrIn" type="number" placeholder="0">
+        </div>
+      </div>
+      <div class="fx-quick-row" id="fxQuickRow"></div>
+    </div>
+
+    <div class="tax-card">
+      <p style="font-size:12.5px;font-weight:700;margin-bottom:10px;">🧾 금액+세금 계산</p>
+      <div class="tax-presets" id="taxPresetsRow"></div>
+      <div class="tax-grid">
+        <div class="tax-field"><label>금액</label><input class="tax-in" id="taxAmt" type="number" placeholder="0"></div>
+        <div class="tax-field"><label>통화</label><select class="tax-in" id="taxCurr"><option value="KRW">KRW</option><option value="IDR">IDR</option></select></div>
+        <div class="tax-field"><label>세율(%)</label><input class="tax-in" id="taxPct" type="number" value="11"></div>
+      </div>
+      <div class="tax-result">
+        <div class="tax-row"><span>원래 금액</span><span id="taxBase">—</span></div>
+        <div class="tax-row" id="taxRateRow"><span>세금 (11%)</span><span id="taxTax">—</span></div>
+        <div class="tax-row total"><span>💳 최종 결제금액</span><span id="taxTotal">—</span></div>
+      </div>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-day-lbl">📅 날짜별 경비 기록</div>
+      <select id="expDaySelect" style="width:100%;padding:8px 10px;border-radius:8px;border:1px solid var(--line);font-size:12.5px;margin-bottom:12px;">
+        ${DAYS.map((d,i)=>`<option value="${i}" ${i===dayIdx?'selected':''}>${d.date} · ${d.region}</option>`).join('')}
+      </select>
+      <div class="exp-cols">
+        <div>
+          <div class="exp-col-title" style="color:var(--leaf-deep);">💵 현금</div>
+          <div id="cashList"></div>
+          <div class="exp-add-row">
+            <input id="cashLabel" placeholder="내역">
+            <input id="cashAmt" placeholder="금액" type="number">
+            <button id="addCashBtn">+</button>
+          </div>
+        </div>
+        <div>
+          <div class="exp-col-title" style="color:var(--terracotta);">💳 카드</div>
+          <div id="cardList"></div>
+          <div class="exp-add-row">
+            <input id="cardLabel" placeholder="내역">
+            <input id="cardAmt" placeholder="금액" type="number">
+            <button id="addCardBtn">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="exp-day-total"><span>이 날 합계</span><span>${fmtKRW(dayCash+dayCard)}</span></div>
+    </div>
+  `;
+
+  // 현금/카드 리스트 렌더
+  const renderExpList = ()=>{
+    document.getElementById('cashList').innerHTML = dayExp.cash.map((e,i)=>`
+      <div class="exp-item"><span>${e.label}</span><span class="amt">${fmtKRW(e.amount)} <span style="cursor:pointer;color:#c1653a;" data-type="cash" data-idx="${i}" class="exp-del">✕</span></span></div>
+    `).join('') || '<div style="font-size:11px;color:#a49a86;padding:4px 0;">기록 없음</div>';
+    document.getElementById('cardList').innerHTML = dayExp.card.map((e,i)=>`
+      <div class="exp-item"><span>${e.label}</span><span class="amt">${fmtKRW(e.amount)} <span style="cursor:pointer;color:#c1653a;" data-type="card" data-idx="${i}" class="exp-del">✕</span></span></div>
+    `).join('') || '<div style="font-size:11px;color:#a49a86;padding:4px 0;">기록 없음</div>';
+    el.querySelectorAll('.exp-del').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const type = btn.dataset.type, idx = +btn.dataset.idx;
+        dayExp[type].splice(idx,1);
+        renderExpense();
+      });
+    });
+  };
+  renderExpList();
+
+  document.getElementById('expDaySelect').addEventListener('change', (e)=>{
+    state.expenseDayIdx = +e.target.value;
+    renderExpense();
+  });
+  document.getElementById('addCashBtn').addEventListener('click', ()=>{
+    const label = document.getElementById('cashLabel').value.trim();
+    const amount = parseInt(document.getElementById('cashAmt').value.replace(/[^0-9]/g,''),10)||0;
+    if(!label||!amount) return;
+    dayExp.cash.push({label, amount});
+    renderExpense();
+  });
+  document.getElementById('addCardBtn').addEventListener('click', ()=>{
+    const label = document.getElementById('cardLabel').value.trim();
+    const amount = parseInt(document.getElementById('cardAmt').value.replace(/[^0-9]/g,''),10)||0;
+    if(!label||!amount) return;
+    dayExp.card.push({label, amount});
+    renderExpense();
+  });
+
+  // 환율 계산기
+  const krwInEl = document.getElementById('krwIn');
+  const idrInEl = document.getElementById('idrIn');
+  const fromKRW = ()=>{
+    const k = parseFloat(krwInEl.value)||0;
+    idrInEl.value = k>0 ? Math.round(k/state.fxRate) : '';
+  };
+  const fromIDR = ()=>{
+    const i = parseFloat(idrInEl.value)||0;
+    krwInEl.value = i>0 ? Math.round(i*state.fxRate) : '';
+  };
+  krwInEl.addEventListener('input', fromKRW);
+  idrInEl.addEventListener('input', fromIDR);
+  document.getElementById('fxSwapBtn').addEventListener('click', ()=>{
+    const tmp = krwInEl.value; krwInEl.value = idrInEl.value; idrInEl.value = tmp;
+  });
+  document.getElementById('fxRateIn').addEventListener('input', (e)=>{
+    const v = parseFloat(e.target.value);
+    if(v>0){ state.fxRate = v; renderFxQuick(); }
+  });
+
+  function renderFxQuick(){
+    const row = document.getElementById('fxQuickRow');
+    if(!row) return;
+    const krwAmts = [10000,50000,100000,300000];
+    row.innerHTML = krwAmts.map(a=>`<button class="fx-qbtn" data-krw="${a}">${(a/10000).toFixed(0)}만원</button>`).join('');
+    row.querySelectorAll('.fx-qbtn').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        krwInEl.value = btn.dataset.krw;
+        fromKRW();
+      });
+    });
+  }
+  renderFxQuick();
+
+  // 세금 계산기
+  const taxPresetsRow = document.getElementById('taxPresetsRow');
+  taxPresetsRow.innerHTML = TAX_PRESETS.map(t=>`<button class="tax-pbtn ${t.pct===taxState.pct?'sel':''}" data-pct="${t.pct}">${t.label}</button>`).join('');
+  const calcTax = ()=>{
+    const amt = parseFloat(document.getElementById('taxAmt').value)||0;
+    const pct = parseFloat(document.getElementById('taxPct').value)||0;
+    const curr = document.getElementById('taxCurr').value;
+    taxState = {amt, pct, curr};
+    const tax = amt*pct/100;
+    const total = amt+tax;
+    document.getElementById('taxRateRow').querySelector('span').textContent = `세금 (${pct}%)`;
+    if(amt===0){
+      document.getElementById('taxBase').textContent='—';
+      document.getElementById('taxTax').textContent='—';
+      document.getElementById('taxTotal').textContent='—';
+      return;
+    }
+    const f = curr==='KRW' ? fmtKRW : fmtIDR;
+    document.getElementById('taxBase').textContent = f(amt);
+    document.getElementById('taxTax').textContent = f(tax);
+    document.getElementById('taxTotal').textContent = f(total);
+  };
+  document.getElementById('taxAmt').addEventListener('input', calcTax);
+  document.getElementById('taxPct').addEventListener('input', calcTax);
+  document.getElementById('taxCurr').addEventListener('change', calcTax);
+  taxPresetsRow.querySelectorAll('.tax-pbtn').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      document.getElementById('taxPct').value = btn.dataset.pct;
+      calcTax();
+    });
+  });
+}
+
+/* ===== 앨범: 사진+글 게시 (IndexedDB 저장, 불가 시 메모리) ===== */
+let POSTS = [], compose = {imgs:[], text:'', day:0}, idbOK = null;
+const idb = {
+  db:null,
+  open(){ return new Promise(res=>{ try{ const r=indexedDB.open('bali_album',1); r.onupgradeneeded=()=>r.result.createObjectStore('kv'); r.onsuccess=()=>{idb.db=r.result;res(true)}; r.onerror=()=>res(false); }catch(e){res(false)} }); },
+  get(){ return new Promise(res=>{ if(!idb.db) return res(null); const q=idb.db.transaction('kv').objectStore('kv').get('posts'); q.onsuccess=()=>res(q.result||null); q.onerror=()=>res(null); }); },
+  set(v){ if(!idb.db) return; try{ idb.db.transaction('kv','readwrite').objectStore('kv').put(v,'posts'); }catch(e){} }
+};
+idb.open().then(ok=>{ idbOK=ok; return idb.get(); }).then(v=>{ if(v) POSTS=v; if(state.currentView==='album') renderAlbum(); });
+const savePosts = ()=>idb.set(POSTS);
+function shrink(file){ return new Promise(res=>{ const u=URL.createObjectURL(file), im=new Image(); im.onload=()=>{ const s=Math.min(1,1280/Math.max(im.width,im.height)), c=document.createElement('canvas'); c.width=Math.round(im.width*s); c.height=Math.round(im.height*s); c.getContext('2d').drawImage(im,0,0,c.width,c.height); URL.revokeObjectURL(u); res(c.toDataURL('image/jpeg',0.8)); }; im.onerror=()=>res(null); im.src=u; }); }
+function renderAlbum(){
+  const el = document.getElementById('view-album');
+  const sty = 'width:100%;padding:8px 10px;border-radius:8px;border:1px solid var(--line);font-size:12.5px;margin-bottom:10px;';
+  el.innerHTML = `<p class="section-title">📷 여행 앨범</p>
+    ${idbOK===false ? '<div style="background:#fff3cd;color:#7a5b00;padding:10px 12px;border-radius:10px;font-size:12.5px;margin-bottom:12px;">⚠️ 이 화면에서는 사진·글이 저장되지 않아요. 크롬 브라우저로 열어주세요.</div>' : ''}
+    <div class="memo-card" style="margin-bottom:18px;">
+      <select id="pDay" style="${sty}">${DAYS.map((d,i)=>`<option value="${i}" ${i===compose.day?'selected':''}>${d.date} · ${d.region}</option>`).join('')}</select>
+      <textarea class="memo-ta" id="pText" placeholder="오늘의 기록을 남겨보세요 🌴">${esc(compose.text)}</textarea>
+      ${compose.imgs.length ? `<div class="album-grid" style="margin-top:10px;">${compose.imgs.map((u,i)=>`<div class="album-photo"><img src="${u}"><div class="del" data-rm="${i}">✕</div></div>`).join('')}</div>` : ''}
+      <div class="memo-bottom"><label class="upload-label" style="margin:0;">📸 사진 추가<input type="file" id="pFile" accept="image/*" multiple></label><button class="memo-save" id="pPost">게시</button></div>
+    </div>
+    <div id="feed"></div>
+    <div style="display:flex;gap:8px;margin-top:16px;"><button class="memo-save" id="pExp" style="background:var(--paper-2);color:var(--leaf-deep);">💾 백업 저장</button><label class="upload-label" style="margin:0;">📂 백업 불러오기<input type="file" id="pImp" accept=".json"></label></div>`;
+  const hm = t=>{ const d=new Date(t); return (d.getMonth()+1)+'/'+d.getDate()+' '+String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0'); };
+  document.getElementById('feed').innerHTML = POSTS.length ? POSTS.map(p=>{
+    const d = DAYS.find(x=>x.id===p.day) || DAYS[0];
+    return `<div class="place-card" style="padding:14px;margin-bottom:14px;"><div style="display:flex;justify-content:space-between;align-items:center;"><div style="font-size:12px;font-weight:800;color:var(--leaf-deep);">${d.date} · ${d.region}</div><div style="font-size:11px;color:#8a8272;">${hm(p.ts)}<span data-pedit="${p.id}" style="cursor:pointer;margin-left:10px;">✏️</span><span data-pdel="${p.id}" style="cursor:pointer;margin-left:10px;color:#c1653a;">✕</span></div></div>
+      ${p.imgs.length ? `<div class="album-grid" style="margin-top:10px;">${p.imgs.map((u,i)=>`<div class="album-photo" data-pid="${p.id}" data-i="${i}"><img src="${u}"></div>`).join('')}</div>` : ''}
+      ${p.text ? `<div style="margin-top:10px;font-size:13.5px;line-height:1.6;white-space:pre-wrap;">${esc(p.text)}</div>` : ''}</div>`;
+  }).join('') : `<div class="empty-state">아직 게시글이 없어요.<br>사진과 함께 오늘의 기록을 남겨보세요 🌴</div>`;
+  el.oninput = e=>{ if(e.target.id==='pText') compose.text = e.target.value; };
+  el.onchange = async e=>{
+    const t = e.target;
+    if(t.id==='pDay') compose.day = +t.value;
+    if(t.id==='pFile'){ for(const f of t.files){ const u = await shrink(f); if(u) compose.imgs.push(u); } renderAlbum(); }
+    if(t.id==='pImp' && t.files[0]){ try{ const a = JSON.parse(await t.files[0].text()); if(Array.isArray(a)){ POSTS = a.concat(POSTS.filter(p=>!a.some(q=>q.id===p.id))); savePosts(); renderAlbum(); } }catch(err){ alert('백업 파일을 읽지 못했어요'); } }
+  };
+  el.onclick = e=>{
+    const t = e.target, ds = t.dataset || {};
+    if(ds.rm!==undefined){ compose.imgs.splice(+ds.rm,1); renderAlbum(); return; }
+    if(t.id==='pPost'){ if(!compose.text.trim() && !compose.imgs.length) return; POSTS.unshift({id:Date.now()+'', day:DAYS[compose.day].id, ts:Date.now(), text:compose.text.trim(), imgs:compose.imgs}); compose = {imgs:[], text:'', day:compose.day}; savePosts(); renderAlbum(); return; }
+    if(ds.pdel){ if(confirm('이 게시글을 삭제할까요?')){ POSTS = POSTS.filter(p=>p.id!==ds.pdel); savePosts(); renderAlbum(); } return; }
+    if(ds.pedit){ const p = POSTS.find(x=>x.id===ds.pedit), v = prompt('글 수정', p.text); if(v!==null){ p.text = v; savePosts(); renderAlbum(); } return; }
+    if(t.id==='pExp'){ const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([JSON.stringify(POSTS)],{type:'application/json'})); a.download = 'bali_album_backup.json'; a.click(); return; }
+    const ph = t.closest('.album-photo'); if(ph && ph.dataset.pid){ const p = POSTS.find(x=>x.id===ph.dataset.pid); openLightbox(p.imgs, +ph.dataset.i); }
+  };
+}
+
+/* ============ INIT ============ */
+renderCatMenu();
+document.getElementById('catMenu').addEventListener('click', (e)=>{
+  const btn = e.target.closest('.cat-btn');
+  if(btn) switchView(btn.dataset.view);
+});
+document.querySelectorAll('.nav-btn').forEach(btn=>{
+  btn.addEventListener('click', ()=> switchView(btn.dataset.nav));
+});
+renderCurrentView();
+</script>
+</body>
+</html>
