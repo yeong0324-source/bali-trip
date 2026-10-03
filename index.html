@@ -1706,9 +1706,9 @@ function renderPlaceList(view, data){
     </div>
     ${filtered.map((p,i)=>`
       <div class="place-card">
-        <div class="place-photo">
+        <div class="place-photo" ${PP[view+':'+p.name]?`style="background:url('${PP[view+':'+p.name]}') center/cover;"`:''}>
           <span class="place-tag">${p.region}</span>
-          ${p.emoji}
+          <span class="pe-em" ${PP[view+':'+p.name]?'style="display:none"':''}>${p.emoji}</span>
         </div>
         <div class="place-body">
           <div class="place-name">${p.name} ${p.rating ? `<span class="rating-badge">★${p.rating}</span>` : ''}</div>
@@ -1718,8 +1718,10 @@ function renderPlaceList(view, data){
           <div class="place-actions">
             <a class="map-btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=${p.lat},${p.lng}">🗺️ 지도</a>
             <a class="goto-btn" target="_blank" href="https://www.google.com/maps/dir/?api=1&destination=${p.lat},${p.lng}&travelmode=driving">🧭 길찾기</a>
+            <a class="map-btn" target="_blank" href="https://www.google.com/search?tbm=isch&q=${encodeURIComponent(p.name+' '+p.region+' 발리')}">📷 사진</a>
             <button class="info-btn" data-view="${view}" data-idx="${data.indexOf(p)}">ℹ️</button>
           </div>
+          ${peBox(view+':'+p.name)}
           ${noteBox('u|'+view+':'+p.name)}
         </div>
       </div>
@@ -1735,6 +1737,49 @@ function renderPlaceList(view, data){
     });
   });
 }
+
+/* ============ 장소 블로그 링크 · 내 사진 (맛집/카페/마사지) ============ */
+var PP = {};
+function loadPP(){ idb.get('pphotos').then(v=>{ if(!v) return; Object.assign(PP, v); const m={food:FOOD,cafe:CAFE,spa:SPA}[state.currentView]; if(m) renderPlaceList(state.currentView, m); }); }
+function peBox(key){
+  const L = (U.links && U.links[key]) || [], im = PP[key], A = 'style="cursor:pointer"';
+  return `<div class="nb pe" data-pk="${esc(key)}">
+    ${L.length ? `<div class="nbq">${L.map((l,i)=>`<a href="${esc(l.url)}" target="_blank" rel="noopener">📝 ${esc(l.title)}</a><a data-lkdel="${i}" ${A}>✕</a>`).join('')}</div>` : ''}
+    <details><summary>🔗 블로그·내 사진${L.length||im?' ●':''}</summary>
+      <input data-lku type="url" placeholder="블로그 주소 붙여넣기 (https://...)">
+      <input data-lkn type="text" placeholder="이름 (선택, 예: 네이버 후기)">
+      <div class="nbq"><a data-lkadd ${A}>➕ 링크 추가</a><a ${A} onclick="this.nextElementSibling.click()">🖼️ 내 사진 올리기</a><input type="file" accept="image/*" data-ppf hidden>${im?`<a data-ppdel ${A}>사진 삭제</a>`:''}</div>
+    </details></div>`;
+}
+function peRefresh(pe){
+  const key = pe.dataset.pk, open = pe.querySelector('details').open, card = pe.closest('.place-card');
+  pe.outerHTML = peBox(key);
+  const np = [...card.querySelectorAll('.pe')].find(x=>x.dataset.pk===key);
+  if(open) np.querySelector('details').open = true;
+  const ph = card.querySelector('.place-photo'), im = PP[key], em = ph.querySelector('.pe-em');
+  ph.style.background = im ? "url('"+im+"') center/cover" : ''; if(em) em.style.display = im ? 'none' : '';
+}
+document.addEventListener('click', e=>{
+  const t = e.target, pe = t.closest && t.closest('.pe'); if(!pe) return;
+  const key = pe.dataset.pk;
+  if(t.hasAttribute('data-lkadd')){
+    let u = pe.querySelector('[data-lku]').value.trim(), n = pe.querySelector('[data-lkn]').value.trim(); if(!u) return;
+    if(!/^https?:\/\//i.test(u)) u = 'https://'+u;
+    let h; try{ h = new URL(u); if(!/^https?:$/.test(h.protocol)) throw 0; }catch(x){ alert('주소를 다시 확인해 주세요'); return; }
+    U.links = U.links || {}; (U.links[key] = U.links[key] || []).push({url:h.href, title:n || h.hostname.replace(/^www\./,'')});
+    saveU(); peRefresh(pe);
+  } else if(t.hasAttribute('data-lkdel')){
+    U.links[key].splice(+t.dataset.lkdel,1); if(!U.links[key].length) delete U.links[key]; saveU(); peRefresh(pe);
+  } else if(t.hasAttribute('data-ppdel')){
+    delete PP[key]; idb.set(PP,'pphotos'); peRefresh(pe);
+  }
+});
+document.addEventListener('change', async e=>{
+  const t = e.target; if(!t.hasAttribute || !t.hasAttribute('data-ppf')) return;
+  const pe = t.closest('.pe'), f = t.files && t.files[0]; if(!f) return;
+  const d = await shrink(f); if(!d) return;
+  PP[pe.dataset.pk] = d; idb.set(PP,'pphotos'); peRefresh(pe);
+});
 
 /* ============ PLACE DETAIL MODAL ============ */
 function openPlaceModal(p){
@@ -2018,10 +2063,10 @@ let POSTS = [], compose = {imgs:[], text:'', day:0}, idbOK = null;
 const idb = {
   db:null,
   open(){ return new Promise(res=>{ try{ const r=indexedDB.open('bali_album',1); r.onupgradeneeded=()=>r.result.createObjectStore('kv'); r.onsuccess=()=>{idb.db=r.result;res(true)}; r.onerror=()=>res(false); }catch(e){res(false)} }); },
-  get(){ return new Promise(res=>{ if(!idb.db) return res(null); const q=idb.db.transaction('kv').objectStore('kv').get('posts'); q.onsuccess=()=>res(q.result||null); q.onerror=()=>res(null); }); },
-  set(v){ if(!idb.db) return; try{ idb.db.transaction('kv','readwrite').objectStore('kv').put(v,'posts'); }catch(e){} }
+  get(k){ return new Promise(res=>{ if(!idb.db) return res(null); const q=idb.db.transaction('kv').objectStore('kv').get(k||'posts'); q.onsuccess=()=>res(q.result||null); q.onerror=()=>res(null); }); },
+  set(v,k){ if(!idb.db) return; try{ idb.db.transaction('kv','readwrite').objectStore('kv').put(v,k||'posts'); }catch(e){} }
 };
-idb.open().then(ok=>{ idbOK=ok; return idb.get(); }).then(v=>{ if(v) POSTS=v; if(state.currentView==='album') renderAlbum(); });
+idb.open().then(ok=>{ idbOK=ok; loadPP(); return idb.get(); }).then(v=>{ if(v) POSTS=v; if(state.currentView==='album') renderAlbum(); });
 const savePosts = ()=>idb.set(POSTS);
 function shrink(file){ return new Promise(res=>{ const u=URL.createObjectURL(file), im=new Image(); im.onload=()=>{ const s=Math.min(1,1280/Math.max(im.width,im.height)), c=document.createElement('canvas'); c.width=Math.round(im.width*s); c.height=Math.round(im.height*s); c.getContext('2d').drawImage(im,0,0,c.width,c.height); URL.revokeObjectURL(u); res(c.toDataURL('image/jpeg',0.8)); }; im.onerror=()=>res(null); im.src=u; }); }
 function renderAlbum(){
